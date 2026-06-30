@@ -1,0 +1,6 @@
+{
+  "name": "Athul's Maths Classroom",
+  "description": "Next Generation Educational Platform for Mathematics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
