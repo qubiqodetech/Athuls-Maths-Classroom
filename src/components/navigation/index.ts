@@ -1,2 +1,2 @@
-// Navigation Components Index
-export {}
+export * from "./breadcrumb"
+

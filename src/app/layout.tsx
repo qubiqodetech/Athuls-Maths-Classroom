@@ -3,6 +3,14 @@ import { Inter, Sora } from "next/font/google"
 import { Providers } from "@/src/providers"
 import { siteConfig } from "@/src/config/site"
 import { cn } from "@/src/lib/utils"
+
+import { AnnouncementBar } from "@/src/components/layout/announcement-bar"
+import { Navbar } from "@/src/components/layout/navbar"
+import { Footer } from "@/src/components/layout/footer"
+import { FloatingActions } from "@/src/components/layout/floating-actions"
+import { CookieBanner } from "@/src/components/layout/cookie-banner"
+import { GlobalLoading } from "@/src/components/layout/global-loading"
+
 import "./globals.css"
 
 const inter = Inter({
@@ -88,11 +96,19 @@ export default function RootLayout({
         )}
       >
         <Providers>
+          <GlobalLoading />
           <div className="relative flex min-h-screen flex-col">
-            {/* Header placeholder */}
-            <main className="flex-1">{children}</main>
-            {/* Footer placeholder */}
+            <AnnouncementBar 
+              message="Admissions open for 2026 Batch. Limited seats available." 
+              href="/admissions" 
+              ctaText="Apply Now" 
+            />
+            <Navbar />
+            <main className="flex-1 pt-24">{children}</main>
+            <Footer />
           </div>
+          <FloatingActions />
+          <CookieBanner />
         </Providers>
       </body>
     </html>
