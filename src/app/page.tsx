@@ -7,6 +7,7 @@ import { CoursesPreview } from "@/src/components/sections/courses-preview"
 import { FounderSection } from "@/src/components/sections/founder"
 import { StudentSuccess } from "@/src/components/sections/student-success"
 import { FacultyPreview } from "@/src/components/sections/faculty-preview"
+import { TestimonialsSection } from "@/src/components/sections/testimonials"
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <FounderSection />
       <StudentSuccess />
       <FacultyPreview />
+      <TestimonialsSection />
 
       {/* CTA Section */}
       <section className="py-24 bg-[#E31E24] text-white text-center">
