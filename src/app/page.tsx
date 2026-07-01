@@ -1,13 +1,14 @@
 import { BookOpen, Users, Target, Lightbulb, TrendingUp, Award } from "lucide-react"
 import { Hero } from "@/src/components/sections/hero"
-
 import { TrustSection } from "@/src/components/sections/trust"
+import { LearningExperience } from "@/src/components/sections/learning-experience"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Hero />
       <TrustSection />
+      <LearningExperience />
 
       {/* Courses Section */}
       <section className="py-24 bg-[#050816] text-white">
