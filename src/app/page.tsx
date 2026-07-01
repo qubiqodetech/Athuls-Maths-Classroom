@@ -5,6 +5,7 @@ import { LearningExperience } from "@/src/components/sections/learning-experienc
 
 import { CoursesPreview } from "@/src/components/sections/courses-preview"
 import { FounderSection } from "@/src/components/sections/founder"
+import { StudentSuccess } from "@/src/components/sections/student-success"
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <LearningExperience />
       <CoursesPreview />
       <FounderSection />
+      <StudentSuccess />
 
       {/* CTA Section */}
       <section className="py-24 bg-[#E31E24] text-white text-center">
