@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Navbar } from "@/src/components/layout/navbar";
+import { Footer } from "@/src/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Athul's Maths Classroom",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
