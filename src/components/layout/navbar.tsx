@@ -1,152 +1,116 @@
 "use client"
 
-import * as React from "react"
 import Link from "next/link"
+import { Menu, X } from "lucide-react"
+import { useState } from "react"
 import { usePathname } from "next/navigation"
-import { motion, AnimatePresence } from "motion/react"
-import { Menu, Search, X } from "lucide-react"
-import { siteConfig } from "@/src/config/site"
-import { navigationLinks } from "@/src/config/navigation"
-import { Button } from "@/src/components/ui/button"
 import { cn } from "@/src/lib/utils"
-import { Container } from "./container"
-import { MobileNav } from "./mobile-nav"
-import { SearchOverlay } from "./search-overlay"
+
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "Courses", href: "/courses" },
+  { name: "Faculty", href: "/faculty" },
+]
 
 export function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const [isScrolled, setIsScrolled] = React.useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
-  const [isSearchOpen, setIsSearchOpen] = React.useState(false)
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   return (
-    <>
-      <header
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-          isScrolled
-            ? "bg-background/80 backdrop-blur-md border-border/40 shadow-sm py-3"
-            : "bg-transparent py-5"
-        )}
-      >
-        <Container>
-          <nav className="flex items-center justify-between">
-            <Link 
-              href="/" 
-              className="flex items-center gap-2 z-50 group"
-              onClick={() => setIsMobileMenuOpen(false)}
+    <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+        <div className="flex lg:flex-1">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+            <span className="font-bold text-xl text-[#0D1B2A]">
+              Athul's Maths Classroom
+            </span>
+          </Link>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <span className="sr-only">Open main menu</span>
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+        <div className="hidden lg:flex lg:gap-x-12">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={cn(
+                "text-sm font-semibold leading-6 transition-colors",
+                pathname === item.href ? "text-[#E31E24]" : "text-gray-900 hover:text-[#E31E24]"
+              )}
             >
-              <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-primary transition-colors group-hover:text-secondary">
-                {siteConfig.shortName}
-              </span>
+              {item.name}
             </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
-              <ul className="flex items-center gap-6">
-                {navigationLinks.map((link) => {
-                  const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
-                  return (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className={cn(
-                          "text-sm font-medium transition-colors hover:text-secondary relative py-1",
-                          isActive ? "text-primary" : "text-muted-foreground"
-                        )}
-                      >
-                        {link.title}
-                        {isActive && (
-                          <motion.div
-                            layoutId="navbar-indicator"
-                            className="absolute left-0 right-0 -bottom-1 h-0.5 bg-secondary rounded-full"
-                            transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
-                          />
-                        )}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-
-              <div className="flex items-center gap-4">
-                <Button 
-                  variant="ghost" 
-                  size="icon"
-                  onClick={() => setIsSearchOpen(true)}
-                  aria-label="Open search"
-                >
-                  <Search size={20} />
-                </Button>
-                <Button asChild className="rounded-full px-6">
-                  <Link href="/admissions">Admissions</Link>
-                </Button>
+          ))}
+        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Link
+            href="/courses"
+            className="text-sm font-semibold leading-6 text-white bg-[#E31E24] px-4 py-2 rounded-lg hover:bg-red-700 transition"
+          >
+            Apply for Admission
+          </Link>
+        </div>
+      </nav>
+      {/* Mobile menu, show/hide based on menu open state. */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden" role="dialog" aria-modal="true">
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+                <span className="font-bold text-xl text-[#0D1B2A]">AMC</span>
+              </Link>
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <X className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={cn(
+                        "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50",
+                        pathname === item.href ? "text-[#E31E24]" : "text-gray-900"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+                <div className="py-6">
+                  <Link
+                    href="/courses"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Apply for Admission
+                  </Link>
+                </div>
               </div>
             </div>
-
-            {/* Mobile Actions */}
-            <div className="flex items-center gap-4 lg:hidden z-50">
-              <Button 
-                variant="ghost" 
-                size="icon"
-                onClick={() => setIsSearchOpen(true)}
-                aria-label="Open search"
-              >
-                <Search size={20} />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle menu"
-                className="relative"
-              >
-                <AnimatePresence mode="wait">
-                  {isMobileMenuOpen ? (
-                    <motion.div
-                      key="close"
-                      initial={{ opacity: 0, rotate: -90 }}
-                      animate={{ opacity: 1, rotate: 0 }}
-                      exit={{ opacity: 0, rotate: 90 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <X size={24} />
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      key="menu"
-                      initial={{ opacity: 0, rotate: 90 }}
-                      animate={{ opacity: 1, rotate: 0 }}
-                      exit={{ opacity: 0, rotate: -90 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <Menu size={24} />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </Button>
-            </div>
-          </nav>
-        </Container>
-      </header>
-
-      <MobileNav 
-        isOpen={isMobileMenuOpen} 
-        onClose={() => setIsMobileMenuOpen(false)} 
-      />
-      
-      <SearchOverlay 
-        isOpen={isSearchOpen} 
-        onClose={() => setIsSearchOpen(false)} 
-      />
-    </>
+          </div>
+        </div>
+      )}
+    </header>
   )
 }

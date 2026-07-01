@@ -1,14 +1,31 @@
+import { FacultyHero, FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { getTeachers } from "@/src/data/faculty"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Teachers",
-  description: "Meet the expert mathematics teachers at AMC.",
+  title: "Teachers | Athul's Maths Classroom",
+  description: "Learn from the best mathematics teachers in Kerala. Expert faculty dedicated to academic excellence.",
 }
 
 export default function TeachersPage() {
+  const teachers = getTeachers()
+
   return (
-    <div className="container mx-auto py-24 flex items-center justify-center min-h-[50vh]">
-      <h1 className="font-display text-4xl font-bold tracking-tight">Teachers</h1>
-    </div>
+    <main className="min-h-screen bg-gray-50">
+      <FacultyHero 
+        title="Expert Mathematics Teachers"
+        subtitle="Core Faculty"
+        description="Learn from highly qualified educators with a proven track record of helping students achieve 100% success in board and competitive exams."
+        primaryCta={{ label: "Apply for Admission", href: "/admissions" }}
+      />
+      
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <FacultyGrid members={teachers} variant="teachers" />
+        </div>
+      </section>
+
+      <FacultyCTA />
+    </main>
   )
 }

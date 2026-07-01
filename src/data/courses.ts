@@ -1,0 +1,183 @@
+export type CourseCategory = "sslc" | "higher-secondary" | "revision" | "foundation";
+
+export interface Course {
+  id: string;
+  title: string;
+  slug: string;
+  category: CourseCategory;
+  shortDescription: string;
+  description: string;
+  targetClass: string;
+  duration: string;
+  mode: "Offline" | "Online" | "Hybrid";
+  featured: boolean;
+  highlights: string[];
+  topics: { title: string; description: string }[];
+  outcomes: { title: string; description: string }[];
+  imageSrc: string;
+  imageAlt: string;
+  faqs: { question: string; answer: string }[];
+}
+
+export const coursesData: Course[] = [
+  {
+    id: "1",
+    title: "SSLC Mathematics Foundation",
+    slug: "sslc-mathematics-foundation",
+    category: "sslc",
+    shortDescription: "A complete guide to mastering 10th standard mathematics with a focus on board exam excellence.",
+    description: "The SSLC Mathematics Foundation course is meticulously designed for 10th standard students to ensure they not only understand the core mathematical concepts but also excel in their board examinations. We bridge the gap between textbook knowledge and practical problem-solving.",
+    targetClass: "Class 10",
+    duration: "1 Year",
+    mode: "Offline",
+    featured: true,
+    imageSrc: "https://picsum.photos/seed/course-sslc/1200/800",
+    imageAlt: "SSLC students in a classroom",
+    highlights: [
+      "Comprehensive syllabus coverage",
+      "Chapter-wise mock tests",
+      "Previous year question paper discussions",
+      "Special focus on weak areas"
+    ],
+    topics: [
+      { title: "Arithmetic Sequences", description: "Understanding sequences, nth term, and sum of n terms." },
+      { title: "Mathematics of Chance", description: "Basic probability and expected values." },
+      { title: "Second Degree Equations", description: "Solving quadratic equations and applications." },
+      { title: "Geometry", description: "Circles, Tangents, and Solids." },
+      { title: "Trigonometry", description: "Trigonometric ratios and heights/distances." },
+      { title: "Coordinates", description: "Coordinate geometry and applications." },
+      { title: "Polynomials", description: "Understanding and factoring polynomials." },
+      { title: "Statistics", description: "Mean, median, and data analysis." }
+    ],
+    outcomes: [
+      { title: "Board Exam Readiness", description: "Fully prepared to score A+ in SSLC Mathematics." },
+      { title: "Strong Foundation", description: "Solid groundwork for Higher Secondary mathematics." },
+      { title: "Problem Solving Speed", description: "Enhanced speed and accuracy in calculations." },
+      { title: "Conceptual Clarity", description: "Clear understanding over rote memorization." }
+    ],
+    faqs: [
+      { question: "When do the batches start?", answer: "Batches usually commence in the first week of April." },
+      { question: "How many students are in a batch?", answer: "We maintain a maximum of 30 students per batch to ensure personal attention." },
+      { question: "Do you provide study materials?", answer: "Yes, comprehensive printed notes and question banks are provided." }
+    ]
+  },
+  {
+    id: "2",
+    title: "Plus One Mathematics",
+    slug: "plus-one-mathematics",
+    category: "higher-secondary",
+    shortDescription: "Bridge the gap between high school and higher secondary with strong conceptual clarity.",
+    description: "Plus One Mathematics sets the stage for higher education. This course is designed to transition students from high school basics to advanced concepts smoothly, ensuring a deep understanding of core topics like Calculus, Algebra, and Trigonometry.",
+    targetClass: "Class 11",
+    duration: "1 Year",
+    mode: "Offline",
+    featured: true,
+    imageSrc: "https://picsum.photos/seed/course-plusone/1200/800",
+    imageAlt: "Plus One students studying",
+    highlights: [
+      "In-depth concept building",
+      "Foundation for entrance exams",
+      "Regular assignments and tests",
+      "Doubt clearing sessions"
+    ],
+    topics: [
+      { title: "Sets and Functions", description: "Sets, relations, and advanced functions." },
+      { title: "Algebra", description: "Complex numbers, permutations, combinations, and binomial theorem." },
+      { title: "Coordinate Geometry", description: "Straight lines and conic sections." },
+      { title: "Calculus Basics", description: "Limits and derivatives." },
+      { title: "Statistics and Probability", description: "Advanced statistical measures and probability." }
+    ],
+    outcomes: [
+      { title: "Seamless Transition", description: "Smooth shift from 10th to 11th standard math." },
+      { title: "Analytical Thinking", description: "Developed ability to tackle complex logical problems." },
+      { title: "Entrance Foundation", description: "Early preparation for KEAM/JEE basic concepts." },
+      { title: "Excellent Scores", description: "Top grades in the Plus One board examinations." }
+    ],
+    faqs: [
+      { question: "Is this course aligned with the state syllabus?", answer: "Yes, it perfectly aligns with the Kerala State Syllabus and CBSE." },
+      { question: "Are there regular parent-teacher meetings?", answer: "Yes, we conduct PTA meetings after every major term assessment." }
+    ]
+  },
+  {
+    id: "3",
+    title: "Plus Two Mathematics Intensive",
+    slug: "plus-two-mathematics",
+    category: "higher-secondary",
+    shortDescription: "Intensive board exam preparation ensuring top grades and strong foundation for entrance exams.",
+    description: "The decisive year of higher secondary education demands a rigorous and focused approach. Our Plus Two Mathematics Intensive program is tailored to maximize board exam scores while reinforcing concepts crucial for competitive entrance examinations.",
+    targetClass: "Class 12",
+    duration: "1 Year",
+    mode: "Offline",
+    featured: true,
+    imageSrc: "https://picsum.photos/seed/course-plustwo/1200/800",
+    imageAlt: "Plus Two students preparing for exams",
+    highlights: [
+      "Rigorous revision schedules",
+      "Weekly mock board exams",
+      "Individual performance tracking",
+      "Time management strategies"
+    ],
+    topics: [
+      { title: "Relations and Functions", description: "Advanced functions and inverse trigonometric functions." },
+      { title: "Algebra", description: "Matrices and determinants." },
+      { title: "Calculus", description: "Continuity, differentiability, integrals, and differential equations." },
+      { title: "Vectors & 3D Geometry", description: "Vector algebra and three-dimensional geometry." },
+      { title: "Linear Programming", description: "LPP formulation and graphical solutions." },
+      { title: "Probability", description: "Conditional probability and Bayes' theorem." }
+    ],
+    outcomes: [
+      { title: "Board Excellence", description: "Targeting 100% scores in the final board exams." },
+      { title: "Competitive Edge", description: "Strong base for tackling KEAM/JEE mathematics sections." },
+      { title: "Exam Confidence", description: "Reduced anxiety through extensive mock testing." },
+      { title: "Perfect Time Management", description: "Ability to complete exams accurately within time limits." }
+    ],
+    faqs: [
+      { question: "Do you offer crash courses before exams?", answer: "Yes, enrolled students get our final revision crash course included." },
+      { question: "How often are the tests?", answer: "We conduct chapter-wise tests weekly and full-portion mock exams from December." }
+    ]
+  },
+  {
+    id: "4",
+    title: "Mathematics Crash Course (SSLC)",
+    slug: "sslc-crash-course",
+    category: "revision",
+    shortDescription: "A fast-paced, highly effective revision program for SSLC students before the final exams.",
+    description: "Designed for students who want a quick but comprehensive review of the entire SSLC mathematics syllabus. This course focuses on high-yield topics, frequently asked questions, and exam presentation techniques.",
+    targetClass: "Class 10",
+    duration: "2 Months",
+    mode: "Hybrid",
+    featured: false,
+    imageSrc: "https://picsum.photos/seed/course-crash/1200/800",
+    imageAlt: "Students doing fast revision",
+    highlights: [
+      "Complete syllabus review",
+      "Focus on previous year questions",
+      "Time-saving calculation tricks",
+      "Exam presentation tips"
+    ],
+    topics: [
+      { title: "Important Formulations", description: "Quick recap of all formulas." },
+      { title: "High-Weightage Chapters", description: "Deep dive into chapters with maximum marks." },
+      { title: "Model Paper Solving", description: "Solving 10+ model question papers." }
+    ],
+    outcomes: [
+      { title: "Quick Confidence Boost", description: "Rapidly build confidence before the exam." },
+      { title: "Score Improvement", description: "Significant improvement in expected grades." }
+    ],
+    faqs: [
+      { question: "When does the crash course start?", answer: "Usually in January, two months prior to the board exams." }
+    ]
+  }
+];
+
+export function getCourseBySlug(slug: string): Course | undefined {
+  return coursesData.find((course) => course.slug === slug);
+}
+
+export function getFeaturedCourses(): Course[] {
+  return coursesData.filter((course) => course.featured);
+}
+
+export function getAllCourses(): Course[] {
+  return coursesData;
+}

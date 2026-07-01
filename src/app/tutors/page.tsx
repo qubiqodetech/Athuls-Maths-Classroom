@@ -1,14 +1,31 @@
+import { FacultyHero, FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { getTutors } from "@/src/data/faculty"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Tutors",
-  description: "Meet our dedicated tutors who help students excel.",
+  title: "Tutors & Mentors | Athul's Maths Classroom",
+  description: "Get personalized guidance from our academic mentors and tutors. Perfect for doubt clearing and regular practice.",
 }
 
 export default function TutorsPage() {
+  const tutors = getTutors()
+
   return (
-    <div className="container mx-auto py-24 flex items-center justify-center min-h-[50vh]">
-      <h1 className="font-display text-4xl font-bold tracking-tight">Tutors</h1>
-    </div>
+    <main className="min-h-screen bg-gray-50">
+      <FacultyHero 
+        title="Academic Mentors & Tutors"
+        subtitle="Personalized Support"
+        description="Our mentors ensure you stay on track with regular practice, instant doubt clearing, and personalized guidance."
+        primaryCta={{ label: "Explore Courses", href: "/courses" }}
+      />
+      
+      <section className="py-24">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <FacultyGrid members={tutors} variant="tutors" />
+        </div>
+      </section>
+
+      <FacultyCTA />
+    </main>
   )
 }
