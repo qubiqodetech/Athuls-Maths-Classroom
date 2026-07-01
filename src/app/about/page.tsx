@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { AboutHero } from "@/src/components/sections/about/hero"
+import { OurStory } from "@/src/components/sections/about/story"
 
 export const metadata: Metadata = {
   title: "About Us | Athul's Maths Classroom",
@@ -10,6 +11,8 @@ export default function AboutPage() {
   return (
     <main className="flex-1 w-full bg-white">
       <AboutHero />
+      <OurStory />
     </main>
   )
 }
+
