@@ -1,39 +1,11 @@
 import { BookOpen, Users, Target, Lightbulb, TrendingUp, Award } from "lucide-react"
+import { Hero } from "@/src/components/sections/hero"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-[#0D1B2A] text-white py-24">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="inline-block py-1 px-3 rounded-full bg-[#E31E24]/20 text-[#E31E24] text-sm font-semibold mb-6">
-              Admissions Open for 2026
-            </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Building Strong Foundations in Mathematics.
-            </h1>
-            <p className="text-lg text-gray-300 mb-8 max-w-lg">
-              Join Athul's Maths Classroom for a premium, concept-driven learning experience that ensures academic excellence and confidence.
-            </p>
-            <div className="flex gap-4">
-              <button className="px-6 py-3 bg-[#E31E24] text-white rounded-lg font-medium hover:bg-red-700 transition">
-                Enroll Now
-              </button>
-              <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-medium hover:bg-white/10 transition">
-                Explore Courses
-              </button>
-            </div>
-          </div>
-          <div className="aspect-video bg-gray-800 rounded-xl overflow-hidden relative">
-            <img 
-              src="https://picsum.photos/seed/amc-hero/1200/900" 
-              alt="Students learning mathematics" 
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
-      </section>
+      <Hero />
+
 
       {/* Stats Section */}
       <section className="border-b bg-[#F8FAFC]">
