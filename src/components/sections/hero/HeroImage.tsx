@@ -10,7 +10,7 @@ export function HeroImage() {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
-      className="relative w-full h-[500px] lg:h-[700px] flex items-center justify-center mt-12 lg:mt-0"
+      className="relative w-full h-[400px] md:h-[500px] lg:h-[700px] flex items-center justify-center mt-12 lg:mt-0"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-gradient-to-tr from-gray-50 to-white rounded-[3rem] transform rotate-3 scale-105 border border-gray-100 shadow-sm" />

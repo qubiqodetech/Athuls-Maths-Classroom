@@ -21,7 +21,7 @@ export function LearningHeading() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="text-4xl md:text-5xl font-bold text-[#0D1B2A] leading-tight tracking-tight mb-6"
+        className="text-3xl md:text-5xl font-bold text-[#0D1B2A] leading-tight tracking-tight mb-6"
       >
         Learning Mathematics, <br className="hidden sm:block" />
         <span className="text-gray-400">One Step at a Time.</span>

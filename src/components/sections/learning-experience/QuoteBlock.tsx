@@ -15,7 +15,7 @@ export function QuoteBlock() {
       <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-8xl text-gray-100 font-serif opacity-50 select-none">
         "
       </div>
-      <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#0D1B2A] font-medium italic leading-relaxed relative z-10">
+      <h3 className="text-xl md:text-3xl lg:text-4xl text-[#0D1B2A] font-medium italic leading-relaxed relative z-10">
         {QUOTE_TEXT}
       </h3>
     </motion.div>
