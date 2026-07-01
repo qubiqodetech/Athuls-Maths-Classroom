@@ -1,14 +1,15 @@
 import { Metadata } from "next"
+import { AboutHero } from "@/src/components/sections/about/hero"
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn more about Athul's Maths Classroom and our mission.",
+  title: "About Us | Athul's Maths Classroom",
+  description: "Learn more about Athul's Maths Classroom, our mission, and the philosophy behind our concept-based mathematics teaching.",
 }
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto py-24 flex items-center justify-center min-h-[50vh]">
-      <h1 className="font-display text-4xl font-bold tracking-tight">About Us</h1>
-    </div>
+    <main className="flex-1 w-full bg-white">
+      <AboutHero />
+    </main>
   )
 }
