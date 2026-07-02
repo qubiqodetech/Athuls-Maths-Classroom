@@ -3,12 +3,12 @@
 import { useState } from "react"
 import { CourseCategory, getAllCourses } from "@/src/data/courses"
 import { 
-  CourseHero, 
   CategoryFilter, 
   CourseGrid, 
   LearningJourney, 
   AdmissionCTA 
 } from "@/src/components/courses"
+import { CoursesHero } from "@/src/components/sections/courses/hero"
 
 export default function CoursesPage() {
   const [activeCategory, setActiveCategory] = useState<CourseCategory | "all">("all")
@@ -20,9 +20,9 @@ export default function CoursesPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <CourseHero />
+      <CoursesHero />
       
-      <section className="py-20">
+      <section id="programs" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0D1B2A] mb-4">Browse Programs</h2>

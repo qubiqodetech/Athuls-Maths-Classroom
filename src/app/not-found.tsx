@@ -8,10 +8,6 @@ export default function NotFound() {
       <p className="text-muted-foreground max-w-md">
         The page you are looking for doesn&apos;t exist or has been moved.
       </p>
-      {/* 
-        Temporarily using a simple link. 
-        In Phase 2, this will be replaced with the custom Button component.
-      */}
       <Link 
         href="/" 
         className="mt-8 inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
