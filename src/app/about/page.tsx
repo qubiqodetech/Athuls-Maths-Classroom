@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { AboutHero } from "@/src/components/sections/about/hero"
 import { OurStory } from "@/src/components/sections/about/story"
+import { TeachingPhilosophy } from "@/src/components/sections/about/teaching-philosophy"
 
 export const metadata: Metadata = {
   title: "About Us | Athul's Maths Classroom",
@@ -12,7 +13,9 @@ export default function AboutPage() {
     <main className="flex-1 w-full bg-white">
       <AboutHero />
       <OurStory />
+      <TeachingPhilosophy />
     </main>
   )
 }
+
 
