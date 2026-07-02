@@ -3,6 +3,7 @@ import { AboutHero } from "@/src/components/sections/about/hero"
 import { OurStory } from "@/src/components/sections/about/story"
 import { TeachingPhilosophy } from "@/src/components/sections/about/teaching-philosophy"
 import { PurposeSection } from "@/src/components/sections/about/purpose"
+import { JourneySection } from "@/src/components/sections/about/journey"
 
 export const metadata: Metadata = {
   title: "About Us | Athul's Maths Classroom",
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <OurStory />
       <TeachingPhilosophy />
       <PurposeSection />
+      <JourneySection />
     </main>
   )
 }
