@@ -1,5 +1,6 @@
 import { FacultyCTA } from "@/src/components/faculty"
 import { FacultyHero } from "@/src/components/sections/faculty/hero"
+import { MentorshipSection } from "@/src/components/sections/faculty/mentorship"
 import { FacultyDirectorySection } from "@/src/components/sections/faculty/directory"
 import { getAllFaculty } from "@/src/data/faculty"
 import { Metadata } from "next"
@@ -15,6 +16,7 @@ export default function FacultyPage() {
   return (
     <main className="min-h-screen bg-white">
       <FacultyHero />
+      <MentorshipSection />
       <FacultyDirectorySection allFaculty={allFaculty} />
       <FacultyCTA />
     </main>
