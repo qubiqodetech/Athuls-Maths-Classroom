@@ -7,9 +7,9 @@ import {
   OutcomeCards,
   CourseFAQ,
   BatchCard,
-  AdmissionCTA,
   RelatedCourses
 } from "@/src/components/courses"
+import { EnrollmentSection } from "@/src/components/sections/courses/enrollment"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -66,7 +66,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
       <OutcomeCards outcomes={course.outcomes} />
       <BatchCard />
       <CourseFAQ faqs={course.faqs} />
-      <AdmissionCTA />
+      <EnrollmentSection />
       <RelatedCourses courses={allCourses} currentCourseId={course.id} />
     </main>
   )

@@ -3,7 +3,6 @@ export * from "./course-grid";
 export * from "./category-filter";
 export * from "./course-hero";
 export * from "./learning-journey";
-export * from "./admission-cta";
 export * from "./course-detail-hero";
 export * from "./benefits-grid";
 export * from "./outcome-cards";
