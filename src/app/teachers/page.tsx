@@ -1,4 +1,5 @@
-import { FacultyHero, FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { PageHero } from "@/src/components/shared"
 import { getTeachers } from "@/src/data/faculty"
 import { Metadata } from "next"
 
@@ -12,7 +13,7 @@ export default function TeachersPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <FacultyHero 
+      <PageHero 
         title="Expert Mathematics Teachers"
         subtitle="Core Faculty"
         description="Learn from highly qualified educators with a proven track record of helping students achieve 100% success in board and competitive exams."

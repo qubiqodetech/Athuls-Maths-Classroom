@@ -1,4 +1,5 @@
-import { FacultyHero, FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { PageHero } from "@/src/components/shared"
 import { getTutors } from "@/src/data/faculty"
 import { Metadata } from "next"
 
@@ -12,7 +13,7 @@ export default function TutorsPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <FacultyHero 
+      <PageHero 
         title="Academic Mentors & Tutors"
         subtitle="Personalized Support"
         description="Our mentors ensure you stay on track with regular practice, instant doubt clearing, and personalized guidance."

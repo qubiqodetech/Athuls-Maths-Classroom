@@ -1,4 +1,3 @@
-export * from "./faculty-hero"
 export * from "./faculty-grid"
 export * from "./teacher-card"
 export * from "./tutor-card"

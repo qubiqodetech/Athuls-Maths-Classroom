@@ -1,4 +1,5 @@
-import { FacultyHero, FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { FacultyGrid, FacultyCTA } from "@/src/components/faculty"
+import { FacultyHero } from "@/src/components/sections/faculty/hero"
 import { getAllFaculty } from "@/src/data/faculty"
 import { Metadata } from "next"
 
@@ -14,15 +15,9 @@ export default function FacultyPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <FacultyHero 
-        title="Meet the Educators Who Inspire Success."
-        subtitle="Our Faculty"
-        description="Our experienced faculty is committed to helping every student build confidence, strengthen concepts, and achieve academic excellence."
-        primaryCta={{ label: "Meet Our Teachers", href: "/teachers" }}
-        secondaryCta={{ label: "Explore Courses", href: "/courses" }}
-      />
+      <FacultyHero />
       
-      <section className="py-24 bg-gray-50">
+      <section id="faculty-grid" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0D1B2A] mb-6">Expert Teachers</h2>

@@ -1,2 +1,2 @@
 // Shared Components Index
-export {}
+export * from "./page-hero"

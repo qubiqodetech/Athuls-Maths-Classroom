@@ -1,15 +1,14 @@
-interface FacultyHeroProps {
+interface PageHeroProps {
   title: string;
   subtitle: string;
   description: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
 }
-
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-export function FacultyHero({ title, subtitle, description, primaryCta, secondaryCta }: FacultyHeroProps) {
+export function PageHero({ title, subtitle, description, primaryCta, secondaryCta }: PageHeroProps) {
   return (
     <section className="bg-[#0D1B2A] text-white pt-32 pb-24 relative overflow-hidden">
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
