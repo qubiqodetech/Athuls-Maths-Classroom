@@ -6,6 +6,7 @@ import { ProgramExplorer } from "@/src/components/sections/courses/program-explo
 import { LearningJourneySection } from "@/src/components/sections/courses/learning-journey"
 import { CompareSection } from "@/src/components/sections/courses/compare"
 import { AdmissionsSection } from "@/src/components/sections/courses/admissions"
+import { FAQSection } from "@/src/components/sections/courses/faq"
 
 export default function CoursesPage() {
   return (
@@ -15,6 +16,7 @@ export default function CoursesPage() {
       <CompareSection />
       <LearningJourneySection />
       <AdmissionsSection />
+      <FAQSection />
       <AdmissionCTA />
     </main>
   )
