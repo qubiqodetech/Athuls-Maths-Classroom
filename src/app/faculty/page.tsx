@@ -2,6 +2,7 @@ import { FacultyCTA } from "@/src/components/faculty"
 import { FacultyHero } from "@/src/components/sections/faculty/hero"
 import { MentorshipSection } from "@/src/components/sections/faculty/mentorship"
 import { ExcellenceSection } from "@/src/components/sections/faculty/excellence"
+import { ActionSection } from "@/src/components/sections/faculty/action"
 import { FacultyDirectorySection } from "@/src/components/sections/faculty/directory"
 import { getAllFaculty } from "@/src/data/faculty"
 import { Metadata } from "next"
@@ -19,6 +20,7 @@ export default function FacultyPage() {
       <FacultyHero />
       <MentorshipSection />
       <ExcellenceSection />
+      <ActionSection />
       <FacultyDirectorySection allFaculty={allFaculty} />
       <FacultyCTA />
     </main>
