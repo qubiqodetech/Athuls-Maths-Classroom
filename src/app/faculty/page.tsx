@@ -4,6 +4,7 @@ import { MentorshipSection } from "@/src/components/sections/faculty/mentorship"
 import { ExcellenceSection } from "@/src/components/sections/faculty/excellence"
 import { ActionSection } from "@/src/components/sections/faculty/action"
 import { ExperiencesSection } from "@/src/components/sections/faculty/experiences"
+import { FaqSection } from "@/src/components/sections/faculty/faq"
 import { FacultyDirectorySection } from "@/src/components/sections/faculty/directory"
 import { getAllFaculty } from "@/src/data/faculty"
 import { Metadata } from "next"
@@ -23,6 +24,7 @@ export default function FacultyPage() {
       <ExcellenceSection />
       <ActionSection />
       <ExperiencesSection />
+      <FaqSection />
       <FacultyDirectorySection allFaculty={allFaculty} />
       <FacultyCTA />
     </main>
