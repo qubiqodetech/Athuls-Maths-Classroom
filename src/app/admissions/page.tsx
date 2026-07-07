@@ -1,14 +1,17 @@
 import { Metadata } from "next"
+import { ContactHero } from "@/src/components/sections/admissions/hero"
+import { ProcessSection } from "@/src/components/sections/admissions/process"
 
 export const metadata: Metadata = {
-  title: "Admissions",
+  title: "Admissions | Athul's Maths Classroom",
   description: "Join Athul's Maths Classroom. Information on admissions and enrollments.",
 }
 
 export default function AdmissionsPage() {
   return (
-    <div className="container mx-auto py-24 flex items-center justify-center min-h-[50vh]">
-      <h1 className="font-display text-4xl font-bold tracking-tight">Admissions</h1>
-    </div>
+    <main className="flex min-h-screen flex-col w-full overflow-hidden">
+      <ContactHero />
+      <ProcessSection />
+    </main>
   )
 }
