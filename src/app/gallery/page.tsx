@@ -1,6 +1,9 @@
 import { Metadata } from "next"
 import { GalleryHero } from "@/src/components/sections/gallery/hero"
 import { EditorialGallery } from "@/src/components/sections/gallery/editorial"
+import { EventsSection } from "@/src/components/sections/gallery/events"
+import { VideoStories } from "@/src/components/sections/gallery/videos"
+import { GalleryCTA } from "@/src/components/sections/gallery/cta"
 
 export const metadata: Metadata = {
   title: "Gallery | Athul's Maths Classroom",
@@ -12,6 +15,9 @@ export default function GalleryPage() {
     <main className="flex min-h-screen flex-col w-full overflow-hidden">
       <GalleryHero />
       <EditorialGallery />
+      <EventsSection />
+      <VideoStories />
+      <GalleryCTA />
     </main>
   )
 }
