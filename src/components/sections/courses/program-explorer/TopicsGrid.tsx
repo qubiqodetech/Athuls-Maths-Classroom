@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "motion/react"
 import { Heading } from "@/src/components/typography/heading"
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 
 interface TopicsGridProps {
   topics: TopicType[]
