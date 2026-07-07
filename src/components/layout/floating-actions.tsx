@@ -2,10 +2,11 @@
 
 import * as React from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { ArrowUp, MessageCircle } from "lucide-react"
+import { ArrowUp, MessageCircle, Search } from "lucide-react"
 import { Button } from "@/src/components/ui/button"
 import { siteConfig } from "@/src/config/site"
 import { cn } from "@/src/lib/utils"
+import { openSearch } from "@/src/components/layout/global-search"
 
 export function FloatingActions() {
   const [isVisible, setIsVisible] = React.useState(false)
@@ -37,6 +38,15 @@ export function FloatingActions() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none">
       
+      {/* Mobile Search Button */}
+      <button 
+        onClick={openSearch}
+        className="pointer-events-auto md:hidden relative w-12 h-12 bg-white text-gray-800 border border-gray-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
+        aria-label="Open Search"
+      >
+        <Search size={24} />
+      </button>
+
       {/* WhatsApp Button */}
       <a 
         href={`https://wa.me/${waNumber}`} 
