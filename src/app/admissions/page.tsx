@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { ContactHero } from "@/src/components/sections/admissions/hero"
 import { ProcessSection } from "@/src/components/sections/admissions/process"
+import { FinalAdmissionsCTA } from "@/src/components/sections/admissions/cta"
 
 export const metadata: Metadata = {
   title: "Admissions | Athul's Maths Classroom",
@@ -12,6 +13,8 @@ export default function AdmissionsPage() {
     <main className="flex min-h-screen flex-col w-full overflow-hidden">
       <ContactHero />
       <ProcessSection />
+      <FinalAdmissionsCTA />
     </main>
   )
 }
+
