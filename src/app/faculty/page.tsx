@@ -1,10 +1,10 @@
-import { FacultyCTA } from "@/src/components/faculty"
 import { FacultyHero } from "@/src/components/sections/faculty/hero"
 import { MentorshipSection } from "@/src/components/sections/faculty/mentorship"
 import { ExcellenceSection } from "@/src/components/sections/faculty/excellence"
 import { ActionSection } from "@/src/components/sections/faculty/action"
 import { ExperiencesSection } from "@/src/components/sections/faculty/experiences"
 import { FaqSection } from "@/src/components/sections/faculty/faq"
+import { CtaSection } from "@/src/components/sections/faculty/cta"
 import { FacultyDirectorySection } from "@/src/components/sections/faculty/directory"
 import { getAllFaculty } from "@/src/data/faculty"
 import { Metadata } from "next"
@@ -26,7 +26,7 @@ export default function FacultyPage() {
       <ExperiencesSection />
       <FaqSection />
       <FacultyDirectorySection allFaculty={allFaculty} />
-      <FacultyCTA />
+      <CtaSection />
     </main>
   )
 }

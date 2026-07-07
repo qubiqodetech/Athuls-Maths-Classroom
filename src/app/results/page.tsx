@@ -1,4 +1,6 @@
 import { Metadata } from "next"
+import { ResultsHero } from "@/src/components/sections/results/hero"
+import { ResultsShowcase } from "@/src/components/sections/results/showcase"
 
 export const metadata: Metadata = {
   title: "Results",
@@ -7,8 +9,9 @@ export const metadata: Metadata = {
 
 export default function ResultsPage() {
   return (
-    <div className="container mx-auto py-24 flex items-center justify-center min-h-[50vh]">
-      <h1 className="font-display text-4xl font-bold tracking-tight">Results Showcase</h1>
-    </div>
+    <main className="flex min-h-screen flex-col w-full overflow-hidden">
+      <ResultsHero />
+      <ResultsShowcase />
+    </main>
   )
 }
