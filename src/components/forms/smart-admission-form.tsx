@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Check, ChevronRight, ChevronLeft, GraduationCap, User, Users, Calendar, ArrowRight, Download, MessageCircle } from "lucide-react";
 import { cn } from "@/src/lib/utils";
+import { toast } from "sonner";
 
 type Step = 1 | 2 | 3 | 4 | 5;
 
@@ -24,6 +25,9 @@ export function SmartAdmissionForm() {
 
   const submitForm = () => {
     // In a real app, submit data to server here
+    toast.success("Application successfully submitted!", {
+      description: "Our admissions team will contact you shortly."
+    });
     nextStep(); // Move to success step
   };
 
