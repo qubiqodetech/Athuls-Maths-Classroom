@@ -18,7 +18,7 @@ export function FloatingActions() {
       const innerHeight = window.innerHeight
       const offsetHeight = document.body.offsetHeight
       
-      setIsVisible(scrollY > 300)
+      setIsVisible(scrollY > 500)
       
       const progress = scrollY / (offsetHeight - innerHeight)
       setScrollProgress(Math.min(progress, 1) * 100)

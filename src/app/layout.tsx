@@ -5,6 +5,7 @@ import { Footer } from "@/src/components/layout/footer";
 import { GlobalSearch } from "@/src/components/layout/global-search";
 import { FloatingActions } from "@/src/components/layout/floating-actions";
 import { ScrollProgress } from "@/src/components/layout/scroll-progress";
+import { ReadingProgress } from "@/src/components/scroll/ReadingProgress";
 import { Toaster } from "sonner";
 import { Inter, Sora } from 'next/font/google';
 import { MotionConfig } from "@/src/components/transitions/MotionConfig";
@@ -12,6 +13,7 @@ import { LoadingBar } from "@/src/components/transitions/LoadingBar";
 import { NavigationEvents } from "@/src/components/transitions/NavigationEvents";
 import { TransitionOverlay } from "@/src/components/transitions/TransitionOverlay";
 import { PageTransitionProvider } from "@/src/components/transitions/PageTransitionProvider";
+import { ScrollProvider } from "@/src/components/scroll/ScrollProvider";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap' });
@@ -34,11 +36,14 @@ export default function RootLayout({
           <NavigationEvents />
           <TransitionOverlay />
           <ScrollProgress />
+          <ReadingProgress />
           <Navbar />
           <GlobalSearch />
-          <PageTransitionProvider>
-            {children}
-          </PageTransitionProvider>
+          <ScrollProvider>
+            <PageTransitionProvider>
+              {children}
+            </PageTransitionProvider>
+          </ScrollProvider>
           <Footer />
           <FloatingActions />
           <Toaster position="bottom-right" richColors />

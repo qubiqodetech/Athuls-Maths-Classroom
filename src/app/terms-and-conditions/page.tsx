@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 import { Shield, Phone, GraduationCap, FileQuestion } from "lucide-react"
-import { ReadingProgress } from "@/src/components/legal/ReadingProgress"
 import { LegalHero } from "@/src/components/legal/LegalHero"
 import { TableOfContents } from "@/src/components/legal/TableOfContents"
 import { TermsSection } from "@/src/components/legal/TermsSection"
@@ -32,8 +31,7 @@ const sections = [
 export default function TermsAndConditionsPage() {
   return (
     <div className="bg-white min-h-screen relative pb-24">
-      <ReadingProgress />
-      
+
       <Container>
         <div className="max-w-[900px] mx-auto">
           <LegalHero 

@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-import { ReadingProgress } from "@/src/components/legal/ReadingProgress"
 import { LegalHero } from "@/src/components/legal/LegalHero"
 import { TableOfContents } from "@/src/components/legal/TableOfContents"
 import { LegalSection } from "@/src/components/legal/LegalSection"
@@ -27,8 +26,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-white min-h-screen relative pb-24">
-      <ReadingProgress />
-      
+
       <Container>
         <div className="max-w-[900px] mx-auto">
           <LegalHero 
