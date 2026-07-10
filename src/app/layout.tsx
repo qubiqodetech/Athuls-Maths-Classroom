@@ -7,6 +7,11 @@ import { FloatingActions } from "@/src/components/layout/floating-actions";
 import { ScrollProgress } from "@/src/components/layout/scroll-progress";
 import { Toaster } from "sonner";
 import { Inter, Sora } from 'next/font/google';
+import { MotionConfig } from "@/src/components/transitions/MotionConfig";
+import { LoadingBar } from "@/src/components/transitions/LoadingBar";
+import { NavigationEvents } from "@/src/components/transitions/NavigationEvents";
+import { TransitionOverlay } from "@/src/components/transitions/TransitionOverlay";
+import { PageTransitionProvider } from "@/src/components/transitions/PageTransitionProvider";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap' });
@@ -24,13 +29,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
       <body className="antialiased selection:bg-primary-red/20 selection:text-primary-navy">
-        <ScrollProgress />
-        <Navbar />
-        <GlobalSearch />
-        {children}
-        <Footer />
-        <FloatingActions />
-        <Toaster position="bottom-right" richColors />
+        <MotionConfig>
+          <LoadingBar />
+          <NavigationEvents />
+          <TransitionOverlay />
+          <ScrollProgress />
+          <Navbar />
+          <GlobalSearch />
+          <PageTransitionProvider>
+            {children}
+          </PageTransitionProvider>
+          <Footer />
+          <FloatingActions />
+          <Toaster position="bottom-right" richColors />
+        </MotionConfig>
       </body>
     </html>
   );
