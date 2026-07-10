@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import { SocialLinks } from "./SocialLinks";
+import { BrandLogo } from "@/src/components/icons/brand-logo";
 
 export function FooterBrand() {
   return (
     <div className="flex flex-col items-start lg:pr-8">
       <Link href="/" className="inline-block mb-6">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#E31E24] rounded-lg flex items-center justify-center shrink-0">
-            <span className="text-white font-bold text-lg tracking-wider">AMC</span>
+          <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 border border-white/10 shadow-sm backdrop-blur-sm">
+            <BrandLogo className="w-6 h-6" lightMode />
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-white font-bold text-lg tracking-tight">Athul's Maths</span>

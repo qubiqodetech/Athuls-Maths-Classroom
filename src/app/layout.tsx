@@ -42,14 +42,6 @@ export const metadata: Metadata = {
     description: "Transforming mathematics education with premium learning experiences, expert faculty, and exceptional results in Kerala.",
     url: "https://athulsmathsclassroom.com",
     siteName: "Athul's Maths Classroom",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1632559646895-cd98341620c3?q=80&w=1200&h=630&auto=format&fit=crop", // placeholder
-        width: 1200,
-        height: 630,
-        alt: "Athul's Maths Classroom",
-      },
-    ],
     locale: "en_IN",
     type: "website",
   },
@@ -57,7 +49,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Athul's Maths Classroom",
     description: "Transforming mathematics education with premium learning experiences.",
-    images: ["https://images.unsplash.com/photo-1632559646895-cd98341620c3?q=80&w=1200&h=630&auto=format&fit=crop"],
   },
   robots: {
     index: true,

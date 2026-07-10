@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
+import { BrandLogo } from "@/src/components/icons/brand-logo";
 
 interface NavbarLogoProps {
   scrolled: boolean;
@@ -15,8 +16,8 @@ export function NavbarLogo({ scrolled }: NavbarLogoProps) {
         whileTap={{ scale: 0.98 }}
         className="flex items-center gap-2"
       >
-        <div className="w-10 h-10 bg-[#E31E24] rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-sm">
-          A
+        <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm border border-gray-100/50">
+          <BrandLogo className="w-6 h-6" />
         </div>
         <div className="flex flex-col justify-center hidden sm:flex">
           <span className={`font-bold text-lg leading-tight transition-colors duration-300 ${scrolled ? "text-[#0D1B2A]" : "text-gray-900"}`}>

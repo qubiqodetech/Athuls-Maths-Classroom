@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { X, MessageCircle } from "lucide-react";
 import { NAVIGATION_ITEMS } from "./constants";
+import { BrandLogo } from "@/src/components/icons/brand-logo";
 
 interface MobileNavigationProps {
   isOpen: boolean;
@@ -92,8 +93,8 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-[#E31E24] rounded-lg flex items-center justify-center text-white font-bold text-sm">
-                  A
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm border border-gray-100/50">
+                  <BrandLogo className="w-5 h-5" />
                 </div>
                 <span className="font-bold text-[#0D1B2A]">Menu</span>
               </div>
