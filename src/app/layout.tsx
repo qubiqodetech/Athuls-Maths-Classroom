@@ -17,6 +17,8 @@ import { ScrollProvider } from "@/src/components/scroll/ScrollProvider";
 import { PerformanceProvider } from "@/src/components/performance/PerformanceProvider";
 import { OrganizationSchema } from "@/src/components/seo/OrganizationSchema";
 
+import { PreloaderProvider } from "@/src/components/preloader/PreloaderProvider";
+
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap' });
 
@@ -81,23 +83,25 @@ export default function RootLayout({
       <body className="antialiased selection:bg-primary-red/20 selection:text-primary-navy">
         <PerformanceProvider>
           <OrganizationSchema />
-          <MotionConfig>
-            <LoadingBar />
-            <NavigationEvents />
-            <TransitionOverlay />
-            <ScrollProgress />
-            <ReadingProgress />
-            <Navbar />
-            <GlobalSearch />
-            <ScrollProvider>
-              <PageTransitionProvider>
-                {children}
-              </PageTransitionProvider>
-            </ScrollProvider>
-            <Footer />
-            <FloatingActions />
-            <Toaster position="bottom-right" richColors />
-          </MotionConfig>
+          <PreloaderProvider>
+            <MotionConfig>
+              <LoadingBar />
+              <NavigationEvents />
+              <TransitionOverlay />
+              <ScrollProgress />
+              <ReadingProgress />
+              <Navbar />
+              <GlobalSearch />
+              <ScrollProvider>
+                <PageTransitionProvider>
+                  {children}
+                </PageTransitionProvider>
+              </ScrollProvider>
+              <Footer />
+              <FloatingActions />
+              <Toaster position="bottom-right" richColors />
+            </MotionConfig>
+          </PreloaderProvider>
         </PerformanceProvider>
       </body>
     </html>
