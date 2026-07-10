@@ -44,11 +44,30 @@ export const metadata: Metadata = {
     siteName: "Athul's Maths Classroom",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/assets/logos/amc-logo/AMC - Primary Horizontal Logo (Dark Background).png",
+        width: 1909,
+        height: 408,
+        alt: "Athul's Maths Classroom Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Athul's Maths Classroom",
     description: "Transforming mathematics education with premium learning experiences.",
+    images: ["/assets/logos/amc-logo/AMC - Primary Horizontal Logo (Dark Background).png"],
+  },
+  icons: {
+    icon: [
+      { url: '/assets/logos/amc-logo/AMC - Icon  Monogram Only/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/assets/logos/amc-logo/AMC - Icon  Monogram Only/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/assets/logos/amc-logo/AMC - Icon  Monogram Only/favicon.ico',
+    apple: [
+      { url: '/assets/logos/amc-logo/AMC - Icon  Monogram Only/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   robots: {
     index: true,
