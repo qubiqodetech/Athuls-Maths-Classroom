@@ -1,20 +1,58 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Athul's Maths Classroom - Official Website
 
-# Run and deploy your AI Studio app
+Welcome to the official repository for the Athul's Maths Classroom website. This project is built using modern web technologies to deliver a premium, fast, and accessible experience for students, parents, and educators.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/63b00ae6-9a78-48f7-b6c6-cf61ffaf6386
+- **Next.js 15 (App Router)**: Utilizing the latest features including Server Components, streaming, and optimized data fetching.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development and consistent design tokens.
+- **Framer Motion**: High-performance, physics-based animations that provide an "Apple-like" premium feel.
+- **SEO & Accessibility**: Fully compliant with WCAG 2.2 AA standards, robust structured data (Schema.org), dynamic Open Graph tags, and excellent Lighthouse scores.
+- **Performance First**: Optimized bundles with `@next/bundle-analyzer`, dynamic imports, `next/image`, and `next/font`.
+- **CMS Ready Architecture**: Clean data layers decoupled from UI components, ready for seamless integration with headless CMS platforms like Sanity or Payload.
 
-## Run Locally
+## Project Structure
 
-**Prerequisites:**  Node.js
+```
+├── docs/                 # Documentation (Design System, CMS Integration, etc.)
+├── src/
+│   ├── animations/       # Shared Framer Motion variants and utilities
+│   ├── app/              # Next.js App Router (pages, layouts, global CSS)
+│   ├── components/
+│   │   ├── courses/      # Course-specific components
+│   │   ├── faculty/      # Faculty-specific components
+│   │   ├── layout/       # Global structural components (Navbar, Footer, etc.)
+│   │   ├── performance/  # Performance optimization wrappers
+│   │   ├── scroll/       # Advanced scroll behaviors and indicators
+│   │   ├── sections/     # High-level section components used across pages
+│   │   ├── seo/          # Structured data and meta components
+│   │   ├── transitions/  # Global page transitions
+│   │   └── ui/           # Atomic UI components (Buttons, Inputs, etc.)
+│   ├── config/           # Site configuration and global constants
+│   ├── data/             # Static data models (to be replaced by CMS)
+│   ├── lib/              # Utility functions (cn, etc.)
+│   └── types/            # TypeScript interfaces
+└── public/               # Static assets
+```
 
+## Documentation
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+For a deeper dive into the engineering decisions and workflows, please review the documentation:
+
+- [Development Guide](docs/DEVELOPMENT.md)
+- [Design System](docs/DESIGN_SYSTEM.md)
+- [CMS Integration Guide](docs/CMS_INTEGRATION.md)
+
+## Commands
+
+- `npm run dev`: Start local development server.
+- `npm run build`: Build for production.
+- `npm run analyze`: Run bundle analyzer.
+- `npm run lint`: Run ESLint.
+
+## Brand Guidelines
+
+The visual identity is driven by a clean, modern, minimal, and professional aesthetic:
+- **Primary Navy**: `#0D1B2A`
+- **Primary Red**: `#E31E24`
+- **Typography**: Sora (Headings) & Inter (Body)
