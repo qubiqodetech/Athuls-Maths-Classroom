@@ -10,6 +10,8 @@ import {
   RelatedCourses
 } from "@/src/components/courses"
 import { EnrollmentSection } from "@/src/components/sections/courses/enrollment"
+import { CourseSchema } from "@/src/components/seo/CourseSchema"
+import { FAQSchema } from "@/src/components/seo/FAQSchema"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -38,6 +40,8 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
   return (
     <main className="min-h-screen bg-white">
+      <CourseSchema name={course.title} description={course.shortDescription} providerName="Athul's Maths Classroom" />
+      <FAQSchema faqs={course.faqs} />
       <CourseDetailHero course={course} />
       
       {/* Topics Overview Section */}
