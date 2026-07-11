@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react"
+import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from "react"
 import { usePathname } from "next/navigation"
 
 interface ScrollContextType {
@@ -17,13 +17,16 @@ export function ScrollProvider({ children }: { children: ReactNode }) {
   const [sections, setSections] = useState<string[]>([])
   const pathname = usePathname()
 
-  const registerSection = (id: string) => {
-    setSections((prev) => [...prev, id])
-  }
+  const registerSection = useCallback((id: string) => {
+    setSections((prev) => {
+      if (prev.includes(id)) return prev;
+      return [...prev, id];
+    })
+  }, [])
 
-  const unregisterSection = (id: string) => {
+  const unregisterSection = useCallback((id: string) => {
     setSections((prev) => prev.filter((s) => s !== id))
-  }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,14 +63,14 @@ export function ScrollProvider({ children }: { children: ReactNode }) {
     setActiveSection(null)
   }, [pathname])
 
-  const scrollTo = (id: string) => {
+  const scrollTo = useCallback((id: string) => {
     const el = document.getElementById(id)
     if (el) {
       const topOffset = 100 // adjust based on navbar height
       const y = el.getBoundingClientRect().top + window.scrollY - topOffset
       window.scrollTo({ top: y, behavior: "smooth" })
     }
-  }
+  }, [])
 
   return (
     <ScrollContext.Provider value={{ activeSection, scrollTo, registerSection, unregisterSection }}>

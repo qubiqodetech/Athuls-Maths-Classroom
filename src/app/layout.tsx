@@ -16,6 +16,7 @@ import { PageTransitionProvider } from "@/src/components/transitions/PageTransit
 import { ScrollProvider } from "@/src/components/scroll/ScrollProvider";
 import { PerformanceProvider } from "@/src/components/performance/PerformanceProvider";
 import { OrganizationSchema } from "@/src/components/seo/OrganizationSchema";
+import { FloatingAssistant } from "@/src/components/ai/FloatingAssistant";
 
 import { PreloaderProvider } from "@/src/components/preloader/PreloaderProvider";
 
@@ -109,6 +110,7 @@ export default function RootLayout({
               </ScrollProvider>
               <Footer />
               <FloatingActions />
+              <FloatingAssistant />
               <Toaster position="bottom-right" richColors />
             </MotionConfig>
           </PreloaderProvider>
