@@ -72,5 +72,3 @@ export const FEATURES: FeatureType[] = [
     icon: Activity,
   }
 ];
-
-export const QUOTE_TEXT = "Success in Mathematics begins with understanding, grows through practice, and is achieved through consistency.";

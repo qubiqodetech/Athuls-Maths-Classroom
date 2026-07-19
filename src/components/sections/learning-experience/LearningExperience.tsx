@@ -1,7 +1,6 @@
 import { LearningHeading } from "./LearningHeading";
 import { JourneyTimeline } from "./JourneyTimeline";
 import { FeatureGrid } from "./FeatureGrid";
-import { QuoteBlock } from "./QuoteBlock";
 
 export function LearningExperience() {
   return (
@@ -14,7 +13,6 @@ export function LearningExperience() {
         <LearningHeading />
         <JourneyTimeline />
         <FeatureGrid />
-        <QuoteBlock />
       </div>
     </section>
   );

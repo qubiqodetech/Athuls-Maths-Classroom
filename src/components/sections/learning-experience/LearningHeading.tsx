@@ -5,17 +5,6 @@ import { motion } from "motion/react";
 export function LearningHeading() {
   return (
     <div className="text-center max-w-3xl mx-auto mb-20 relative z-10">
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-[#E31E24] text-xs font-bold tracking-widest uppercase mb-6 border border-red-100">
-          THE AMC LEARNING EXPERIENCE
-        </span>
-      </motion.div>
-
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
