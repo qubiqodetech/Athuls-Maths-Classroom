@@ -8,7 +8,7 @@ import { ScrollProgress } from "@/src/components/layout/scroll-progress";
 import { ReadingProgress } from "@/src/components/scroll/ReadingProgress";
 import { Toaster } from "sonner";
 import { Inter, Sora } from 'next/font/google';
-import { MotionConfig } from "motion/react";
+import { MotionConfig } from "@/src/components/transitions/MotionConfig";
 import { LoadingBar } from "@/src/components/transitions/LoadingBar";
 import { NavigationEvents } from "@/src/components/transitions/NavigationEvents";
 import { TransitionOverlay } from "@/src/components/transitions/TransitionOverlay";
@@ -91,25 +91,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
-      <body className={`antialiased selection:bg-primary-red/20 selection:text-primary-navy ${process.env.NODE_ENV === 'development' ? 'dev-mode' : ''}`}>
+      <body className="antialiased selection:bg-primary-red/20 selection:text-primary-navy">
         <PerformanceProvider>
           <OrganizationSchema />
-          <MotionConfig initial={false}>
-            <LoadingBar />
-            <NavigationEvents />
-            <TransitionOverlay />
-            <ScrollProgress />
-            <ReadingProgress />
-            <Navbar />
-            <GlobalSearch />
-            <ScrollProvider>
-              {children}
-            </ScrollProvider>
-            <Footer />
-            <FloatingActions />
-            <FloatingAssistant />
-            <Toaster position="bottom-right" richColors />
-          </MotionConfig>
+            <MotionConfig>
+              <LoadingBar />
+              <NavigationEvents />
+              <TransitionOverlay />
+              <ScrollProgress />
+              <ReadingProgress />
+              <Navbar />
+              <GlobalSearch />
+              <ScrollProvider>
+                  {children}
+              </ScrollProvider>
+              <Footer />
+              <FloatingActions />
+              <FloatingAssistant />
+              <Toaster position="bottom-right" richColors />
+            </MotionConfig>
         </PerformanceProvider>
       </body>
     </html>

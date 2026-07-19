@@ -6,7 +6,7 @@ import { TRUST_CHIPS } from "./constants";
 
 export function TrustChips() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-3 mt-16 relative z-10">
+    <div className="flex flex-wrap items-center justify-center gap-3 mt-8 lg:mt-12 relative z-10">
       {TRUST_CHIPS.map((chip, index) => (
         <motion.div
           key={chip.id}

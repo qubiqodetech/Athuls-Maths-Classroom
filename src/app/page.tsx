@@ -1,4 +1,3 @@
-"use client";
 import { BookOpen, Users, Target, Lightbulb, TrendingUp, Award } from "lucide-react"
 import { Hero } from "@/src/components/sections/hero"
 import { TrustSection } from "@/src/components/sections/trust"

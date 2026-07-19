@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useEffect } from "react"; import { motion } from "motion/react";
+import { motion } from "motion/react";
 import { HeroBadge } from "./HeroBadge";
 import { HeroButtons } from "./HeroButtons";
 import { HeroTrustIndicators } from "./HeroTrustIndicators";
 
 export function HeroContent() {
-  React.useEffect(() => {
-  }, []);
-
   return (
     <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto w-full z-20 relative">
       <HeroBadge />
