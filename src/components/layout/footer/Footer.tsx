@@ -1,4 +1,3 @@
-import { FooterCTA } from "./FooterCTA";
 import { FooterBrand } from "./FooterBrand";
 import { FooterLinks } from "./FooterLinks";
 import { FooterPrograms } from "./FooterPrograms";
@@ -12,9 +11,6 @@ export function Footer() {
     <footer className="w-full bg-[#050816] flex flex-col font-sans relative overflow-hidden">
       {/* Decorative Top Border */}
       <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#E31E24]/50 to-transparent absolute top-0 left-0 z-20" />
-
-      {/* Layer 1: Final Call To Action */}
-      <FooterCTA />
       
       {/* Layer 2: Quick Information Bar */}
       <FooterInfoBar />
