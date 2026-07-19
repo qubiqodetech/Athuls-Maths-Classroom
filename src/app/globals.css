@@ -38,3 +38,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Fix for Framer Motion animation stall in React 19 dev mode */
+body.dev-mode [style*="opacity: 0"],
+body.dev-mode [style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
