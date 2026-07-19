@@ -15,7 +15,7 @@ export function AnimatedLayout({ children }: AnimatedLayoutProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, filter: "blur(8px)", y: 24, scale: 1 }}
+      initial={{ opacity: 1, filter: "blur(0px)", y: 0, scale: 1 }}
       animate={{ 
         opacity: 1, 
         filter: "blur(0px)", 

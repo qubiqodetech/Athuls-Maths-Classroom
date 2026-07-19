@@ -94,7 +94,6 @@ export default function RootLayout({
       <body className="antialiased selection:bg-primary-red/20 selection:text-primary-navy">
         <PerformanceProvider>
           <OrganizationSchema />
-          <PreloaderProvider>
             <MotionConfig>
               <LoadingBar />
               <NavigationEvents />
@@ -104,16 +103,13 @@ export default function RootLayout({
               <Navbar />
               <GlobalSearch />
               <ScrollProvider>
-                <PageTransitionProvider>
                   {children}
-                </PageTransitionProvider>
               </ScrollProvider>
               <Footer />
               <FloatingActions />
               <FloatingAssistant />
               <Toaster position="bottom-right" richColors />
             </MotionConfig>
-          </PreloaderProvider>
         </PerformanceProvider>
       </body>
     </html>

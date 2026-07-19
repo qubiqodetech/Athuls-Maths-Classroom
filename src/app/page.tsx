@@ -4,7 +4,6 @@ import { TrustSection } from "@/src/components/sections/trust"
 import { LearningExperience } from "@/src/components/sections/learning-experience"
 import { CoursesPreview } from "@/src/components/sections/courses-preview"
 import { FounderSection } from "@/src/components/sections/founder"
-import { StudentSuccess } from "@/src/components/sections/student-success"
 import { FacultyPreview } from "@/src/components/sections/faculty-preview"
 import { TestimonialsSection } from "@/src/components/sections/testimonials"
 import { CampusLife } from "@/src/components/sections/campus-life"
@@ -18,7 +17,6 @@ export default function HomePage() {
       <LearningExperience />
       <CoursesPreview />
       <FounderSection />
-      <StudentSuccess />
       <LazyWrapper>
         <FacultyPreview />
       </LazyWrapper>

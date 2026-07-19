@@ -5,7 +5,7 @@ import { ReactNode } from "react"
 
 export function MotionConfig({ children }: { children: ReactNode }) {
   return (
-    <FramerMotionConfig reducedMotion="user">
+    <FramerMotionConfig>
       {children}
     </FramerMotionConfig>
   )
