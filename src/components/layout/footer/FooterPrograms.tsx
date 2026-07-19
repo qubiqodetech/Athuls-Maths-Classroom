@@ -6,16 +6,18 @@ import { PROGRAMS } from "./constants";
 export function FooterPrograms() {
   return (
     <div>
-      <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-6">Programs</h3>
-      <ul className="flex flex-col gap-3">
+      <h3 className="text-white font-semibold text-lg mb-6 tracking-tight">Academic Programs</h3>
+      <ul className="flex flex-col gap-3.5">
         {PROGRAMS.map((program) => (
           <li key={program.label}>
             <Link 
               href={program.href}
-              className="text-gray-400 hover:text-white text-sm font-medium transition-colors relative group w-fit flex items-center"
+              className="group flex items-center text-gray-400 hover:text-white text-sm font-medium transition-colors w-fit"
             >
-              <span className="relative z-10">{program.label}</span>
-              <span className="absolute left-0 bottom-0 w-0 h-px bg-[#E31E24] group-hover:w-full transition-all duration-300" />
+              <span className="w-1.5 h-1.5 rounded-full bg-white/20 mr-3 group-hover:bg-[#E31E24] group-hover:scale-125 transition-all duration-300" />
+              <span className="group-hover:translate-x-1 transition-transform duration-300">
+                {program.label}
+              </span>
             </Link>
           </li>
         ))}

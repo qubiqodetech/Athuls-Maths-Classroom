@@ -6,9 +6,9 @@ import { SocialLinks } from "./SocialLinks";
 
 export function FooterBrand() {
   return (
-    <div className="flex flex-col items-start lg:pr-8">
-      <Link href="/" className="inline-block mb-6 outline-none focus-visible:ring-2 focus-visible:ring-[#E31E24] rounded-lg">
-        <div className="relative w-48 sm:w-56 h-12 flex items-center">
+    <div className="flex flex-col items-start lg:pr-12">
+      <Link href="/" className="inline-block mb-8 outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-lg group">
+        <div className="relative w-48 sm:w-56 h-12 flex items-center transition-opacity group-hover:opacity-90">
           <Image 
             src="/assets/logos/amc-logo/AMC - Primary Horizontal Logo (Dark Background).png" 
             alt="Athul's Maths Classroom" 
@@ -18,8 +18,8 @@ export function FooterBrand() {
         </div>
       </Link>
       
-      <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
-        Athul's Maths Classroom is dedicated to helping students build confidence in mathematics through concept-based learning, personalized guidance, and consistent academic support.
+      <p className="text-gray-400 text-sm leading-relaxed mb-10 max-w-sm">
+        Elevating mathematics education with premium learning experiences, expert faculty, and exceptional results. A place where concepts meet clarity.
       </p>
       
       <SocialLinks />

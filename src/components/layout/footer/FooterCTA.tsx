@@ -1,75 +1,74 @@
 "use client";
 
-import { motion } from "motion/react";
 import Link from "next/link";
+import { motion } from "motion/react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 export function FooterCTA() {
   return (
-    <div className="w-full bg-[#0D1B2A] py-24 relative overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#E31E24]/20 via-[#0D1B2A] to-[#0D1B2A] pointer-events-none" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-4xl text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-tight mb-6"
-        >
-          Ready to Begin Your <br className="hidden sm:block" />
-          <span className="text-gray-400">Mathematics Journey?</span>
-        </motion.h2>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="text-lg text-gray-300 leading-relaxed max-w-[700px] mx-auto mb-12"
-        >
-          Join Athul's Maths Classroom and learn with confidence through structured guidance, expert teaching, and a supportive learning environment.
-        </motion.p>
-        
+    <div className="relative overflow-hidden bg-gradient-to-br from-[#050816] via-[#0D1B2A] to-[#050816] py-20 lg:py-28 border-b border-white/5">
+      {/* Background Glows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] bg-[#E31E24]/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] pointer-events-none" />
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-5xl text-center flex flex-col items-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
         >
-          <Link href="/admissions" className="w-full sm:w-auto">
+          <div className="w-2 h-2 rounded-full bg-[#E31E24] animate-pulse" />
+          <span className="text-white/80 text-sm font-medium tracking-wide uppercase">Admissions Open</span>
+        </motion.div>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-8"
+        >
+          Start learning with <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">Confidence & Clarity.</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+          className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-[600px] mb-12"
+        >
+          Join Athul's Maths Classroom and experience a premium, concept-based approach to mastering mathematics.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
+        >
+          <Link href="/admissions" className="w-full sm:w-auto block">
             <motion.div
-              whileHover={{ y: -2 }}
+              whileHover={{ y: -2, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#E31E24] text-white rounded-xl font-bold text-sm hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20 group border border-transparent"
+              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#0D1B2A] rounded-2xl font-bold text-base hover:bg-gray-100 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)] group"
             >
               Enroll Now
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </motion.div>
-          </Link>
-          
-          <Link href="/contact" className="w-full sm:w-auto">
-            <motion.div
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white rounded-xl font-bold text-sm border border-white/20 hover:border-white/40 hover:bg-white/20 transition-all backdrop-blur-sm"
-            >
-              Contact Us
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.div>
           </Link>
 
-          <Link href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-             <motion.div
-              whileHover={{ y: -2 }}
+          <Link href="/contact" className="w-full sm:w-auto block">
+            <motion.div
+              whileHover={{ y: -2, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-gray-300 rounded-xl font-bold text-sm hover:text-white transition-colors"
+              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-white/5 text-white rounded-2xl font-bold text-base border border-white/10 hover:bg-white/10 transition-all backdrop-blur-md"
             >
-              <MessageCircle className="w-4 h-4" />
-              Chat on WhatsApp
+              Contact Us
             </motion.div>
           </Link>
         </motion.div>

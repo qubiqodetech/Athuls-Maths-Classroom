@@ -5,25 +5,23 @@ import { QUICK_INFO } from "./constants";
 
 export function FooterInfoBar() {
   return (
-    <div className="border-y border-white/5 bg-white/[0.02]">
+    <div className="border-y border-white/5 bg-black/20">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory">
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-white/5">
           {QUICK_INFO.map((info, index) => {
             const Icon = info.icon;
             return (
-              <motion.div
+              <div
                 key={info.id}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
-                className="flex items-center gap-3 shrink-0 snap-start py-5 px-6 md:px-8 border-r border-white/5 last:border-r-0 flex-1 justify-center md:justify-start"
+                className="flex items-center gap-4 py-8 px-6 justify-center group"
               >
-                <Icon className="w-5 h-5 text-[#E31E24] shrink-0" />
-                <span className="text-gray-300 text-sm font-semibold tracking-wide whitespace-nowrap">
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <Icon className="w-4 h-4 text-[#E31E24]" />
+                </div>
+                <span className="text-gray-400 text-xs sm:text-sm font-semibold tracking-wide max-w-[120px] leading-tight group-hover:text-white transition-colors">
                   {info.text}
                 </span>
-              </motion.div>
+              </div>
             );
           })}
         </div>
