@@ -11,7 +11,6 @@ export function TrustSection() {
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
         <TrustHeading />
-        <StatsGrid />
         <RecognitionGrid />
         <TrustChips />
       </div>
