@@ -4,17 +4,25 @@ import { ScrollIndicator } from "./ScrollIndicator";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen pt-24 pb-12 overflow-hidden bg-white flex flex-col lg:justify-center">
-      {/* Premium Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#E31E24]/5 via-transparent to-transparent opacity-70" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#0D1B2A]/5 via-transparent to-transparent opacity-70" />
-      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
+    <section className="relative min-h-[100svh] pt-32 pb-16 overflow-hidden bg-[#FAFAFA] flex flex-col items-center">
+      {/* Ambient background glows */}
+      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#E31E24]/10 rounded-full blur-[120px] opacity-70 pointer-events-none" />
+      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#0D1B2A]/5 rounded-full blur-[150px] opacity-70 pointer-events-none" />
+      
+      {/* Subtle Grid */}
+      <div 
+        className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+        style={{ 
+          backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', 
+          backgroundSize: '40px 40px',
+          maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)'
+        }} 
+      />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 w-full max-w-7xl flex-1 flex flex-col justify-center">
-        <div className="grid lg:grid-cols-[45%_55%] gap-8 lg:gap-16 items-center">
-          <HeroContent />
-          <HeroImage />
-        </div>
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 w-full max-w-7xl flex flex-col items-center justify-center mt-4 md:mt-8">
+        <HeroContent />
+        <HeroImage />
       </div>
 
       <ScrollIndicator />

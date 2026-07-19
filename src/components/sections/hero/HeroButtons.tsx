@@ -10,14 +10,14 @@ export function HeroButtons() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
-      className="flex flex-col sm:flex-row items-center gap-4 mb-12"
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+      className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 w-full sm:w-auto"
     >
       <Link href="/admissions" className="w-full sm:w-auto">
         <motion.div
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#E31E24] text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/20 group"
+          className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#0D1B2A] text-white rounded-2xl font-semibold text-lg hover:bg-[#1a2c42] transition-all shadow-[0_8px_30px_rgb(13,27,42,0.12)] hover:shadow-[0_8px_30px_rgb(13,27,42,0.2)] group"
         >
           Enroll Now
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -28,20 +28,9 @@ export function HeroButtons() {
         <motion.div
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#0D1B2A] rounded-xl font-bold text-lg border-2 border-gray-100 hover:border-gray-200 hover:bg-gray-50 transition-all shadow-sm"
+          className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#0D1B2A] rounded-2xl font-semibold text-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all shadow-sm group"
         >
           Explore Courses
-        </motion.div>
-      </Link>
-
-      <Link href="/about" className="w-full sm:w-auto sm:ml-2">
-        <motion.div
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.98 }}
-          className="w-full flex items-center justify-center gap-2 px-6 py-4 text-gray-600 hover:text-[#E31E24] font-medium transition-colors"
-        >
-          <PlayCircle className="w-5 h-5" />
-          <span>Watch Our Journey</span>
         </motion.div>
       </Link>
     </motion.div>

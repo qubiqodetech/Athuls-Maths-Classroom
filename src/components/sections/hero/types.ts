@@ -1,8 +1,3 @@
-export interface HeroStat {
-  value: string;
-  label: string;
-}
-
 export interface FloatingCard {
   icon: string;
   text: string;
