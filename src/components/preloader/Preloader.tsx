@@ -3,6 +3,7 @@
 import { motion } from "motion/react"
 import { preloaderVariants } from "@/src/animations/preloader"
 import { useEffect } from "react"
+import Image from "next/image"
 
 export function Preloader({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -36,14 +37,19 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
       <div className="relative z-10 flex flex-col items-center">
         <motion.div variants={preloaderVariants.logo} className="mb-8 relative">
           {/* AMC Logo SVG */}
-          <div className="w-20 h-20 bg-[#0D1B2A] rounded-2xl flex items-center justify-center shadow-2xl relative mx-auto overflow-hidden">
-            <span className="text-white font-sora font-bold text-3xl tracking-tighter z-10">AMC</span>
+          <div className="w-20 h-20 rounded-2xl flex items-center justify-center relative mx-auto overflow-hidden">
+            <Image
+              src="/assets/logos/amc-logo/AMC - Icon  Monogram Only.png"
+              alt="AMC Logo"
+              width={80}
+              height={80}
+              className="object-contain drop-shadow-sm z-10"
+              priority
+            />
             <motion.div 
               variants={preloaderVariants.glow}
               className="absolute inset-0 bg-white/10 blur-md z-0"
             />
-            {/* Soft inner glow */}
-            <div className="absolute inset-0 ring-1 ring-white/20 inset-ring-white/10 rounded-2xl pointer-events-none z-20" />
           </div>
         </motion.div>
         

@@ -35,42 +35,45 @@ export function Navbar() {
       <AnnouncementBar />
       <header
         className={cn(
-          "sticky top-0 z-40 transition-all duration-300 w-full",
-          scrolled
-            ? "bg-white/80 backdrop-blur-lg border-b border-gray-200/50 shadow-sm"
-            : "bg-transparent border-b border-transparent"
+          "sticky top-0 z-50 transition-all duration-500 w-full flex justify-center px-4 sm:px-6 pt-4",
+          scrolled ? "pb-4" : "pb-0"
         )}
       >
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-[68px] md:h-[72px] lg:h-[80px]">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <NavbarLogo scrolled={scrolled} />
+        <div 
+          className={cn(
+            "flex items-center justify-between w-full transition-all duration-500 mx-auto max-w-7xl",
+            scrolled
+              ? "h-14 bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-full px-4 lg:px-6"
+              : "h-20 bg-transparent border-transparent px-2 lg:px-4"
+          )}
+        >
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <NavbarLogo scrolled={scrolled} />
+          </div>
+
+          {/* Desktop Navigation */}
+          <DesktopNavigation scrolled={scrolled} />
+
+          {/* Right Actions */}
+          <div className="flex items-center gap-2 md:gap-4 lg:gap-6">
+            <div className="hidden sm:block">
+              <NavbarSearch scrolled={scrolled} />
             </div>
+            
+            <NavbarCTA scrolled={scrolled} />
 
-            {/* Desktop Navigation */}
-            <DesktopNavigation scrolled={scrolled} />
-
-            {/* Right Actions */}
-            <div className="flex items-center gap-2 md:gap-6">
-              <div className="hidden sm:block">
-                <NavbarSearch scrolled={scrolled} />
-              </div>
-              
-              <NavbarCTA scrolled={scrolled} />
-
-              {/* Mobile Menu Toggle */}
-              <button
-                onClick={() => setMobileMenuOpen(true)}
-                className={cn(
-                  "p-2 rounded-full lg:hidden transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#E31E24]",
-                  scrolled ? "text-gray-900 hover:bg-gray-100" : "text-gray-900 hover:bg-gray-100/50"
-                )}
-                aria-label="Open menu"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(true)}
+              className={cn(
+                "p-2 rounded-full lg:hidden transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B2A]",
+                scrolled ? "text-gray-900 hover:bg-gray-100/50" : "text-gray-900 hover:bg-gray-100/50"
+              )}
+              aria-label="Open menu"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </header>

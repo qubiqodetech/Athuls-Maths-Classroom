@@ -9,7 +9,7 @@ interface DesktopNavigationProps {
 
 export function DesktopNavigation({ scrolled }: DesktopNavigationProps) {
   return (
-    <nav className="hidden lg:flex items-center gap-8">
+    <nav className="hidden lg:flex items-center gap-6">
       {NAVIGATION_ITEMS.map((item) => (
         <NavigationItem key={item.label} item={item} scrolled={scrolled} />
       ))}

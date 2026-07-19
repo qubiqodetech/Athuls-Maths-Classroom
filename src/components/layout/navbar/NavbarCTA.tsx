@@ -11,33 +11,16 @@ interface NavbarCTAProps {
 
 export function NavbarCTA({ scrolled }: NavbarCTAProps) {
   return (
-    <div className="hidden md:flex items-center gap-3">
-      <motion.a
-        whileHover={{ y: -2 }}
-        whileTap={{ scale: 0.95 }}
-        href="https://wa.me/919999999999" // Replace with real number later
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp"
-        className={cn(
-          "p-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center",
-          scrolled 
-            ? "bg-green-50 text-green-600 hover:bg-green-100 border border-green-200" 
-            : "bg-green-50 text-green-600 hover:bg-green-100 border border-green-200"
-        )}
-      >
-        <MessageCircle className="w-5 h-5" />
-      </motion.a>
-
+    <div className="hidden md:flex items-center gap-2">
       <motion.div
-        whileHover={{ y: -2 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
       >
         <Link
           href="/admissions"
           className={cn(
-            "px-6 py-2.5 rounded-xl font-bold text-sm transition-all shadow-sm flex items-center justify-center",
-            "bg-[#0D1B2A] text-white hover:bg-[#E31E24] hover:shadow-md"
+            "px-6 py-2.5 rounded-full font-medium text-[13px] transition-all flex items-center justify-center tracking-wide",
+            "bg-[#0D1B2A] text-white hover:bg-[#1a2c42]"
           )}
         >
           Admissions Open
