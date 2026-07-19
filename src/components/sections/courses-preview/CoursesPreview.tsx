@@ -5,7 +5,7 @@ import { CourseCTA } from "./CourseCTA";
 
 export function CoursesPreview() {
   return (
-    <section className="relative py-24 lg:py-32 bg-white overflow-hidden border-b border-gray-100">
+    <section className="relative py-12 lg:py-16 bg-white overflow-hidden border-b border-gray-100">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent opacity-70 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#E31E24]/5 via-transparent to-transparent opacity-70 pointer-events-none" />
