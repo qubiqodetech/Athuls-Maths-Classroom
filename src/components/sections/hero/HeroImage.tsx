@@ -19,7 +19,7 @@ export function HeroImage() {
   return (
     <motion.div
       ref={containerRef}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 1, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
       className="relative w-full max-w-5xl mx-auto aspect-[4/3] md:aspect-[16/9] lg:aspect-[21/9] flex items-center justify-center perspective-1000"

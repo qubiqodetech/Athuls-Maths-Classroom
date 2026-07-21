@@ -20,6 +20,7 @@ export function NavbarLogo({ scrolled }: NavbarLogoProps) {
           src="/assets/logos/amc-logo/AMC - Horizontal Logo.png" 
           alt="Athul's Maths Classroom" 
           fill
+          sizes="(max-width: 640px) 144px, 176px"
           className="object-contain object-left"
           priority
         />

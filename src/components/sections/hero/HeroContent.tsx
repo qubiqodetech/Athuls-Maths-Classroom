@@ -11,7 +11,7 @@ export function HeroContent() {
       <HeroBadge />
       
       <motion.h1
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
         className="text-[40px] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-tight text-[#0D1B2A] mb-6"
@@ -21,7 +21,7 @@ export function HeroContent() {
       </motion.h1>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         className="text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto font-medium"

@@ -15,6 +15,8 @@ import { TransitionOverlay } from "@/src/components/transitions/TransitionOverla
 import { PageTransitionProvider } from "@/src/components/transitions/PageTransitionProvider";
 import { ScrollProvider } from "@/src/components/scroll/ScrollProvider";
 import { PerformanceProvider } from "@/src/components/performance/PerformanceProvider";
+import { ErrorCatcher } from "@/src/components/ErrorCatcher";
+import { GlobalErrorCatcher } from "@/src/components/GlobalErrorCatcher";
 import { OrganizationSchema } from "@/src/components/seo/OrganizationSchema";
 import { FloatingAssistant } from "@/src/components/ai/FloatingAssistant";
 
@@ -93,6 +95,8 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
       <body className="antialiased selection:bg-primary-red/20 selection:text-primary-navy">
         <PerformanceProvider>
+          <ErrorCatcher />
+          <GlobalErrorCatcher />
           <OrganizationSchema />
             <MotionConfig>
               <LoadingBar />

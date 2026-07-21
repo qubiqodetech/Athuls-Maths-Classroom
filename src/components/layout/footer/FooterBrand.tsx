@@ -13,6 +13,7 @@ export function FooterBrand() {
             src="/assets/logos/amc-logo/AMC - Primary Horizontal Logo (Dark Background).png" 
             alt="Athul's Maths Classroom" 
             fill
+            sizes="(max-width: 640px) 192px, 224px"
             className="object-contain object-left"
           />
         </div>

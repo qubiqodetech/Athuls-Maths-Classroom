@@ -17,15 +17,15 @@ export default function HomePage() {
       <LearningExperience />
       <CoursesPreview />
       <FounderSection />
-      <LazyWrapper>
+      
         <FacultyPreview />
-      </LazyWrapper>
-      <LazyWrapper>
+      
+      
         <TestimonialsSection />
-      </LazyWrapper>
-      <LazyWrapper>
+      
+      
         <CampusLife />
-      </LazyWrapper>
+      
     </main>
   )
 }
