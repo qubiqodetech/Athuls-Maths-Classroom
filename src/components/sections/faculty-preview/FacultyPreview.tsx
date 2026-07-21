@@ -3,9 +3,6 @@ import { FeaturedFaculty } from "./FeaturedFaculty";
 import { FacultyGrid } from "./FacultyGrid";
 import { TeachingPhilosophy } from "./TeachingPhilosophy";
 import { FacultyHighlights } from "./FacultyHighlights";
-import { FacultyStats } from "./FacultyStats";
-import { FacultyQuote } from "./FacultyQuote";
-import { FacultyCTA } from "./FacultyCTA";
 
 export function FacultyPreview() {
   return (
@@ -30,9 +27,6 @@ export function FacultyPreview() {
         
         <TeachingPhilosophy />
         <FacultyHighlights />
-        <FacultyStats />
-        <FacultyQuote />
-        <FacultyCTA />
       </div>
     </section>
   );

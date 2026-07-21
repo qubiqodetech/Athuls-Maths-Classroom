@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import { FOUNDER_STORY, FOUNDER_NAME, FOUNDER_ROLE, FOUNDER_INSTITUTION } from "./constants";
 import { FounderQuote } from "./FounderQuote";
 import { FounderHighlights } from "./FounderHighlights";
-import { FounderStats } from "./FounderStats";
 
 export function FounderStory() {
   return (
@@ -55,7 +54,7 @@ export function FounderStory() {
       </motion.div>
 
       <FounderHighlights />
-      <FounderStats />
+
     </div>
   );
 }
