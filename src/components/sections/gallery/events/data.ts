@@ -1,5 +1,5 @@
 export const featuredEvent = {
-  title: "Annual Mathematics Olympiad 2024",
+  title: "Annual Academic Excellence 2024",
   date: "October 15, 2024",
   description: "A district-level competition bringing together the brightest mathematical minds. Over 500 students participated in our flagship academic event.",
   image: "https://picsum.photos/seed/event-feat/1200/800",

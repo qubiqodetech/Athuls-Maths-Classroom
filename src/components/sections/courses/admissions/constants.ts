@@ -66,7 +66,7 @@ export const ADMISSION_STEPS: ProcessStep[] = [
     id: "step-1",
     number: "01",
     title: "Choose Program",
-    description: "Select the mathematics program that fits your academic goals.",
+    description: "Select the academic program that fits your academic goals.",
     icon: MousePointerClick
   },
   {

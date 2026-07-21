@@ -8,7 +8,7 @@ export function CTAQuote() {
       <Quote className="absolute top-8 right-8 w-10 h-10 text-white/10 rotate-180" />
       
       <p className="text-xl md:text-2xl font-display font-medium text-white leading-snug mb-8 max-w-sm pt-4">
-        "The decision to join AMC was the turning point in my mathematics journey."
+        "The decision to join AMC was the turning point in my academic journey."
       </p>
 
       <div className="flex items-center gap-4">

@@ -46,7 +46,7 @@ export function CompareSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Text variant="large" className="text-gray-600 max-w-2xl leading-relaxed mx-auto">
-              Every mathematics program is carefully designed for a specific academic stage.
+              Every academic program is carefully designed for a specific academic stage.
               Compare the programs below to identify the one that best matches your learning journey.
             </Text>
           </motion.div>

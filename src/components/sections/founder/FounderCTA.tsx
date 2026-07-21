@@ -15,7 +15,7 @@ export function FounderCTA() {
     >
       <div>
         <h3 className="text-xl md:text-2xl font-bold text-[#0D1B2A] mb-2 text-center md:text-left">
-          Experience Mathematics the AMC Way.
+          Experience Learning the AMC Way.
         </h3>
         <p className="text-gray-500 text-sm md:text-base text-center md:text-left">
           Join a community dedicated to your academic success.

@@ -19,7 +19,7 @@ export const HIGHLIGHT_CARDS: HighlightCardType[] = [
 
 export const FEATURED_EVENT: EventType = {
   id: "event-1",
-  title: "Mathematics Excellence Awards 2024",
+  title: "Academic Excellence Awards 2024",
   description: "Celebrating the outstanding achievements of our students in the recent board examinations.",
   date: "August 15, 2024",
   image: "https://picsum.photos/seed/event1/1200/800",

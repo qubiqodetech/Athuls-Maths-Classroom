@@ -17,7 +17,7 @@ export function FacultyCTA() {
         Learn From Educators Who Care About Your Success.
       </h3>
       <p className="text-gray-600 mb-10 text-base md:text-lg">
-        Meet our faculty and discover the teaching approach that has helped hundreds of students build confidence in mathematics.
+        Meet our faculty and discover the teaching approach that has helped hundreds of students build confidence in their studies.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

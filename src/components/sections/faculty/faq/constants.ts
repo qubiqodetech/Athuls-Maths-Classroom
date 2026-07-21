@@ -15,7 +15,7 @@ export const FAQS = [
     id: "f1",
     category: "Faculty",
     question: "Who teaches each course?",
-    answer: "Every course is led by experienced subject matter experts. Athul sir personally handles key topics in Plus One and Plus Two Mathematics, supported by a dedicated team of specialist teachers."
+    answer: "Every course is led by experienced subject matter experts. Athul sir personally handles key topics in Plus One and Plus Two (All Subjects), supported by a dedicated team of specialist teachers."
   },
   {
     id: "f2",

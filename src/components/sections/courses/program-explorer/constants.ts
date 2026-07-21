@@ -29,7 +29,7 @@ import { ProgramType } from "./types"
 export const PROGRAMS: ProgramType[] = [
   {
     id: "sslc",
-    name: "SSLC Mathematics",
+    name: "SSLC (All Subjects)",
     targetClass: "Class 10",
     icon: Calculator,
     shortDescription: "Build a strong foundation for your first major board examination with our comprehensive Class 10 program.",
@@ -100,7 +100,7 @@ export const PROGRAMS: ProgramType[] = [
   },
   {
     id: "plus-one",
-    name: "Plus One Mathematics",
+    name: "Plus One (All Subjects)",
     targetClass: "Higher Secondary",
     icon: TrendingUp,
     shortDescription: "Navigate the transition to higher secondary concepts with confidence and build a robust foundation.",
@@ -171,7 +171,7 @@ export const PROGRAMS: ProgramType[] = [
   },
   {
     id: "plus-two",
-    name: "Plus Two Mathematics",
+    name: "Plus Two (All Subjects)",
     targetClass: "Board Examination",
     icon: Award,
     shortDescription: "Master advanced topics and prepare meticulously for your final board examination.",

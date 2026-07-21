@@ -24,7 +24,7 @@ export function SectionHeading() {
         transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
         className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0D1B2A] leading-tight tracking-tight mb-8"
       >
-        More Than Teaching Mathematics. <br className="hidden md:block" />
+        More Than Empowering Students. <br className="hidden md:block" />
         Building <span className="text-[#E31E24]">Confident Learners</span> <br className="hidden md:block" />
         For Life.
       </motion.h2>

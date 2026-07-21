@@ -11,7 +11,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Faculty | Athul's Maths Classroom",
-  description: "Meet the experienced educators and mentors dedicated to helping students build strong foundations in mathematics.",
+  description: "Meet the experienced educators and mentors dedicated to helping students build strong foundations in their studies.",
 }
 
 export default function FacultyPage() {

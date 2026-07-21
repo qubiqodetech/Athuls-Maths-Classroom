@@ -22,11 +22,11 @@ export interface Course {
 export const coursesData: Course[] = [
   {
     id: "1",
-    title: "SSLC Mathematics Foundation",
+    title: "SSLC (All Subjects) Foundation",
     slug: "sslc-mathematics-foundation",
     category: "sslc",
-    shortDescription: "A complete guide to mastering 10th standard mathematics with a focus on board exam excellence.",
-    description: "The SSLC Mathematics Foundation course is meticulously designed for 10th standard students to ensure they not only understand the core mathematical concepts but also excel in their board examinations. We bridge the gap between textbook knowledge and practical problem-solving.",
+    shortDescription: "A complete guide to mastering 10th standard syllabus with a focus on board exam excellence.",
+    description: "The SSLC (All Subjects) Foundation course is meticulously designed for 10th standard students to ensure they not only understand the core academic concepts but also excel in their board examinations. We bridge the gap between textbook knowledge and practical problem-solving.",
     targetClass: "Class 10",
     duration: "1 Year",
     mode: "Offline",
@@ -41,7 +41,7 @@ export const coursesData: Course[] = [
     ],
     topics: [
       { title: "Arithmetic Sequences", description: "Understanding sequences, nth term, and sum of n terms." },
-      { title: "Mathematics of Chance", description: "Basic probability and expected values." },
+      { title: "Basic Sciences & Mathematics", description: "Core concepts across all SSLC subjects." },
       { title: "Second Degree Equations", description: "Solving quadratic equations and applications." },
       { title: "Geometry", description: "Circles, Tangents, and Solids." },
       { title: "Trigonometry", description: "Trigonometric ratios and heights/distances." },
@@ -50,8 +50,8 @@ export const coursesData: Course[] = [
       { title: "Statistics", description: "Mean, median, and data analysis." }
     ],
     outcomes: [
-      { title: "Board Exam Readiness", description: "Fully prepared to score A+ in SSLC Mathematics." },
-      { title: "Strong Foundation", description: "Solid groundwork for Higher Secondary mathematics." },
+      { title: "Board Exam Readiness", description: "Fully prepared to score A+ in SSLC (All Subjects)." },
+      { title: "Strong Foundation", description: "Solid groundwork for Higher Secondary education." },
       { title: "Problem Solving Speed", description: "Enhanced speed and accuracy in calculations." },
       { title: "Conceptual Clarity", description: "Clear understanding over rote memorization." }
     ],
@@ -63,11 +63,11 @@ export const coursesData: Course[] = [
   },
   {
     id: "2",
-    title: "Plus One Mathematics",
+    title: "Plus One (All Subjects)",
     slug: "plus-one-mathematics",
     category: "higher-secondary",
     shortDescription: "Bridge the gap between high school and higher secondary with strong conceptual clarity.",
-    description: "Plus One Mathematics sets the stage for higher education. This course is designed to transition students from high school basics to advanced concepts smoothly, ensuring a deep understanding of core topics like Calculus, Algebra, and Trigonometry.",
+    description: "Plus One (All Subjects) sets the stage for higher education. This course is designed to transition students from high school basics to advanced concepts smoothly, ensuring a deep understanding of core topics like Science, Commerce, and Humanities streams.",
     targetClass: "Class 11",
     duration: "1 Year",
     mode: "Offline",
@@ -88,7 +88,7 @@ export const coursesData: Course[] = [
       { title: "Statistics and Probability", description: "Advanced statistical measures and probability." }
     ],
     outcomes: [
-      { title: "Seamless Transition", description: "Smooth shift from 10th to 11th standard math." },
+      { title: "Seamless Transition", description: "Smooth shift from 10th to 11th standard academics." },
       { title: "Analytical Thinking", description: "Developed ability to tackle complex logical problems." },
       { title: "Entrance Foundation", description: "Early preparation for KEAM/JEE basic concepts." },
       { title: "Excellent Scores", description: "Top grades in the Plus One board examinations." }
@@ -100,11 +100,11 @@ export const coursesData: Course[] = [
   },
   {
     id: "3",
-    title: "Plus Two Mathematics Intensive",
+    title: "Plus Two (All Subjects) Intensive",
     slug: "plus-two-mathematics",
     category: "higher-secondary",
     shortDescription: "Intensive board exam preparation ensuring top grades and strong foundation for entrance exams.",
-    description: "The decisive year of higher secondary education demands a rigorous and focused approach. Our Plus Two Mathematics Intensive program is tailored to maximize board exam scores while reinforcing concepts crucial for competitive entrance examinations.",
+    description: "The decisive year of higher secondary education demands a rigorous and focused approach. Our Plus Two (All Subjects) Intensive program is tailored to maximize board exam scores while reinforcing concepts crucial for competitive entrance examinations.",
     targetClass: "Class 12",
     duration: "1 Year",
     mode: "Offline",
@@ -127,7 +127,7 @@ export const coursesData: Course[] = [
     ],
     outcomes: [
       { title: "Board Excellence", description: "Targeting 100% scores in the final board exams." },
-      { title: "Competitive Edge", description: "Strong base for tackling KEAM/JEE mathematics sections." },
+      { title: "Competitive Edge", description: "Strong base for tackling competitive entrance examinations." },
       { title: "Exam Confidence", description: "Reduced anxiety through extensive mock testing." },
       { title: "Perfect Time Management", description: "Ability to complete exams accurately within time limits." }
     ],
@@ -138,11 +138,11 @@ export const coursesData: Course[] = [
   },
   {
     id: "4",
-    title: "Mathematics Crash Course (SSLC)",
+    title: "Crash Course (SSLC)",
     slug: "sslc-crash-course",
     category: "revision",
     shortDescription: "A fast-paced, highly effective revision program for SSLC students before the final exams.",
-    description: "Designed for students who want a quick but comprehensive review of the entire SSLC mathematics syllabus. This course focuses on high-yield topics, frequently asked questions, and exam presentation techniques.",
+    description: "Designed for students who want a quick but comprehensive review of the entire SSLC syllabus. This course focuses on high-yield topics, frequently asked questions, and exam presentation techniques.",
     targetClass: "Class 10",
     duration: "2 Months",
     mode: "Hybrid",

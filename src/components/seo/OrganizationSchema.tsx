@@ -10,7 +10,7 @@ export function OrganizationSchema() {
       "https://instagram.com/athulsmathsclassroom",
       "https://youtube.com/athulsmathsclassroom"
     ],
-    "description": "Transforming mathematics education with premium learning experiences, expert faculty, and exceptional results in Kerala.",
+    "description": "Transforming education with premium learning experiences, expert faculty, and exceptional results in Kerala.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kerala",

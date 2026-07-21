@@ -6,7 +6,7 @@ export const MILESTONES: MilestoneType[] = [
     id: "m-1",
     year: "2014",
     title: "The Beginning",
-    description: "Athul started teaching mathematics with a simple belief: every student can learn if guided correctly.",
+    description: "Athul started teaching with a simple belief: every student can learn if guided correctly.",
     icon: Flag,
     imageUrl: "https://picsum.photos/seed/amc-start/600/400"
   },

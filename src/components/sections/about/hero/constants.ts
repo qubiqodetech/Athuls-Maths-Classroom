@@ -8,14 +8,14 @@ export const ABOUT_HERO_BADGE = {
 
 export const ABOUT_HERO_HEADING = {
   line1: "Building More Than",
-  line2: "Mathematics Skills.",
+  line2: "Academic Skills.",
   line3: "Building ",
   highlight: "Confidence.",
 };
 
 export const ABOUT_HERO_TEXT = [
   "Athul's Maths Classroom was founded with a simple belief:",
-  "Every student can excel in mathematics when concepts are taught with clarity, patience, and personal attention.",
+  "Every student can excel in their studies when concepts are taught with clarity, patience, and personal attention.",
   "Our mission is to make mathematics understandable, enjoyable, and achievable for every learner."
 ];
 

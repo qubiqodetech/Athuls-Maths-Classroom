@@ -19,7 +19,7 @@ export function CourseCTA() {
         Not Sure Which Program Is Right For You?
       </h3>
       <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-sm md:text-base">
-        Our team will help you choose the most suitable mathematics program based on your academic level and goals.
+        Our team will help you choose the most suitable academic program based on your academic level and goals.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -3,7 +3,7 @@ export const featuredStudent = {
   name: "Arjun Nair",
   class: "Plus Two Science",
   year: "2023-2024",
-  achievement: "100% in Mathematics",
+  achievement: "100% in their studies",
   story: "Arjun's journey from struggling with calculus to achieving a perfect score is a testament to consistent effort and concept-based learning. He dedicated over 200 hours to our revision batches, mastering every complex topic.",
   image: "https://picsum.photos/seed/featstudent/800/800",
 };

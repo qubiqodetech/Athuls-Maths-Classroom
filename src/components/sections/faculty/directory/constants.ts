@@ -1,6 +1,6 @@
 export const FACULTY_FILTERS = [
   "All",
-  "Mathematics",
+  "All Subjects",
   "Higher Secondary",
   "SSLC",
   "Revision",

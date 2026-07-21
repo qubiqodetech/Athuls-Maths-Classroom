@@ -39,7 +39,7 @@ const ANNOUNCEMENTS = [
   {
     id: "ann-2",
     title: "Outstanding Results in State Board Mathematics",
-    summary: "Congratulations to all our students for achieving a 100% pass rate with 85% students scoring A+ in mathematics.",
+    summary: "Congratulations to all our students for achieving a 100% pass rate with 85% students scoring A+ in their studies.",
     date: "Sep 28, 2026",
     category: "Results",
     readTime: "4 min read",

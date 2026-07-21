@@ -31,7 +31,7 @@ export function FinalAdmissionsCTA() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
               <span className="text-xs font-semibold tracking-wider uppercase text-white/90">
-                Your Mathematics Journey Starts Here
+                Your academic journey Starts Here
               </span>
             </div>
 

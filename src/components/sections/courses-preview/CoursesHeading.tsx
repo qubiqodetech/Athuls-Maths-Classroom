@@ -23,7 +23,7 @@ export function CoursesHeading() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         className="text-3xl md:text-5xl font-bold text-[#0D1B2A] leading-tight tracking-tight mb-6"
       >
-        Find the Right Mathematics Program for <br className="hidden sm:block" />
+        Find the Right academic program for <br className="hidden sm:block" />
         <span className="text-gray-400">Your Academic Journey.</span>
       </motion.h2>
 

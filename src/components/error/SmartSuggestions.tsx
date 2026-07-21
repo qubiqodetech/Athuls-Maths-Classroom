@@ -7,7 +7,7 @@ import { ArrowRight, Star, FileText, Sparkles, BookMarked } from "lucide-react"
 const suggestions = [
   {
     title: "Popular Courses",
-    description: "Explore our most sought-after mathematics programs.",
+    description: "Explore our most sought-after academic programs.",
     href: "/courses",
     icon: Star,
     color: "text-amber-500",

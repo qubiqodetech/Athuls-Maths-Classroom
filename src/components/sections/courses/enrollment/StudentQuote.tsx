@@ -17,7 +17,7 @@ export function StudentQuote() {
       </div>
       <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 relative z-10">
         <p className="text-xl md:text-2xl font-medium text-white italic leading-relaxed mb-6">
-          &quot;My confidence in mathematics completely changed after joining AMC.&quot;
+          &quot;My confidence in their studies completely changed after joining AMC.&quot;
         </p>
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center text-lg font-bold text-white border border-white/20">

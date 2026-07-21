@@ -18,4 +18,4 @@ export const TIMELINE_STEPS: TimelineStepType[] = [
   { id: "ts-5", label: "Achieve" },
 ];
 
-export const BRAND_MANIFESTO = "We believe every student deserves the confidence to understand mathematics—not the pressure to memorize it.";
+export const BRAND_MANIFESTO = "We believe every student deserves the confidence to understand concepts—not the pressure to memorize it.";

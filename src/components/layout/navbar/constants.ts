@@ -5,9 +5,9 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     label: "Courses", 
     href: "/courses",
     children: [
-      { label: "SSLC Mathematics", href: "/courses/sslc" },
-      { label: "Plus One Mathematics", href: "/courses/plus-one" },
-      { label: "Plus Two Mathematics", href: "/courses/plus-two" },
+      { label: "SSLC (All Subjects)", href: "/courses/sslc" },
+      { label: "Plus One (All Subjects)", href: "/courses/plus-one" },
+      { label: "Plus Two (All Subjects)", href: "/courses/plus-two" },
       { label: "Entrance Coaching", href: "/courses/entrance" },
     ]
   },
@@ -27,4 +27,4 @@ export const NAVIGATION_ITEMS: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const ANNOUNCEMENT_TEXT = "🎓 Admissions Open for SSLC, Plus One & Plus Two Mathematics — Apply Today";
+export const ANNOUNCEMENT_TEXT = "🎓 Admissions Open for SSLC, Plus One & Plus Two (All Subjects) — Apply Today";

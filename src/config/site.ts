@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Athul's Maths Classroom",
   shortName: "AMC",
-  description: "Next Generation Educational Platform for Mathematics.",
+  description: "Next Generation Educational Platform.",
   url: process.env.APP_URL || "http://localhost:3000",
   ogImage: "/assets/images/og-image.jpg",
   links: {

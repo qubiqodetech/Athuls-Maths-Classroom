@@ -18,7 +18,7 @@ export function HeroContent() {
       >
         <BookOpen className="w-4 h-4 text-primary-red" />
         <span className="text-xs font-semibold tracking-widest text-navy-900 uppercase">
-          Mathematics Programs
+          academic programs
         </span>
       </motion.div>
 
@@ -29,7 +29,7 @@ export function HeroContent() {
       >
         <Heading as="h1" size="xl" className="text-navy-900 leading-tight">
           Choose The Right <br className="hidden md:block" />
-          Mathematics Program <br className="hidden md:block" />
+          academic program <br className="hidden md:block" />
           For <span className="text-primary-red relative inline-block">
             Your Journey.
             <svg className="absolute w-full h-3 -bottom-1 left-0 text-primary-red/20" viewBox="0 0 100 10" preserveAspectRatio="none">

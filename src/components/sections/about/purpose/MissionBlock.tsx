@@ -31,7 +31,7 @@ export function MissionBlock() {
           </h3>
           <div className="space-y-6 text-gray-600 text-lg leading-relaxed mb-8">
             <p>
-              To make mathematics accessible, enjoyable, and understandable for every student, regardless of their past academic performance.
+              To make education accessible, enjoyable, and understandable for every student, regardless of their past academic performance.
             </p>
             <p>
               We aim to replace the fear of numbers with the joy of problem-solving by providing individual attention, concept-based teaching, and a supportive environment where students feel confident to ask questions and explore ideas.

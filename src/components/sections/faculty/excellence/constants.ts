@@ -10,7 +10,7 @@ export const QUALIFICATIONS = [
 ]
 
 export const EXPERTISE_AREAS = [
-  "SSLC Mathematics",
+  "SSLC (All Subjects)",
   "Plus One",
   "Plus Two",
   "Board Exams",
@@ -21,7 +21,7 @@ export const EXPERTISE_AREAS = [
 ]
 
 export const TIMELINE_EVENTS = [
-  { id: "education", title: "Education & Foundations", description: "Building a strong academic background in mathematics and pedagogy." },
+  { id: "education", title: "Education & Foundations", description: "Building a strong academic background in their studies and pedagogy." },
   { id: "teaching", title: "Teaching Career", description: "Gaining practical experience and developing effective teaching methodologies." },
   { id: "success", title: "Student Success", description: "Guiding hundreds of students to academic excellence and board exam success." },
   { id: "growth", title: "Continuous Growth", description: "Evolving as educators through continuous professional development and learning." }

@@ -17,7 +17,7 @@ export const ACHIEVEMENT_STATS: StatItem[] = [
     value: 500,
     suffix: "+",
     label: "Students Guided",
-    description: "Empowered to excel in mathematics"
+    description: "Empowered to excel in their studies"
   },
   {
     id: "outstanding-results",
@@ -86,7 +86,7 @@ export const AWARDS_TIMELINE: TimelineMilestone[] = [
     id: "founded",
     year: "2014",
     title: "Institution Founded",
-    description: "Started with a vision to make mathematics accessible and conceptual.",
+    description: "Started with a vision to make education accessible and conceptual.",
     icon: History
   },
   {
@@ -121,7 +121,7 @@ export const AWARDS_TIMELINE: TimelineMilestone[] = [
     id: "future",
     year: "Present",
     title: "Future Vision",
-    description: "Continuing our commitment to transforming mathematics education.",
+    description: "Continuing our commitment to transforming education.",
     icon: Target
   }
 ]

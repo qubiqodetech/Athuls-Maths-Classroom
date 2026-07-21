@@ -12,7 +12,7 @@ export function LearningHeading() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         className="text-3xl md:text-5xl font-bold text-[#0D1B2A] leading-tight tracking-tight mb-6"
       >
-        Learning Mathematics, <br className="hidden sm:block" />
+        Learning with Confidence, <br className="hidden sm:block" />
         <span className="text-gray-400">One Step at a Time.</span>
       </motion.h2>
 

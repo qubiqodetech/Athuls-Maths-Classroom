@@ -44,4 +44,4 @@ export const EDUCATIONAL_PRINCIPLES: PrincipleType[] = [
   { id: "ep-6", label: "Achieve Excellence" },
 ];
 
-export const SIGNATURE_STATEMENT = "We don't simply prepare students for examinations.\nWe prepare them to understand mathematics with confidence.";
+export const SIGNATURE_STATEMENT = "We don't simply prepare students for examinations.\nWe prepare them to understand concepts with confidence.";

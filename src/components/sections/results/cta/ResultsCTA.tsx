@@ -44,7 +44,7 @@ export function ResultsCTA() {
             </h2>
 
             <p className="text-lg sm:text-xl text-white/70 max-w-lg mb-10 leading-relaxed font-light">
-              Every outstanding result begins with one decision. Start your mathematics journey with Athul's Maths Classroom.
+              Every outstanding result begins with one decision. Start your academic journey with Athul's Maths Classroom.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full">

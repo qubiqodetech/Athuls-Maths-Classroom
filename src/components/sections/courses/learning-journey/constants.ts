@@ -20,7 +20,7 @@ export const JOURNEY_STAGES: JourneyStageType[] = [
     number: "01",
     icon: UserPlus,
     title: "Enrollment",
-    description: "Choose the right mathematics program and complete your admission."
+    description: "Choose the right academic program and complete your admission."
   },
   {
     id: "stage-2",

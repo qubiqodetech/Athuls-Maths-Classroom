@@ -3,7 +3,7 @@ import { FacultyType, StatType } from "./types";
 export const FEATURED_FACULTY: FacultyType = {
   id: "athul",
   name: "Athul",
-  role: "Founder & Mathematics Educator",
+  role: "Founder Founder & Mathematics Educator Lead Educator",
   subjects: ["SSLC", "Plus One", "Plus Two"],
   experience: "10+ Years Experience",
   bio: "Dedicated to transforming mathematics from a feared subject into a logical and enjoyable learning experience for every student.",
@@ -25,7 +25,7 @@ export const FACULTY_MEMBERS: FacultyType[] = [
     id: "faculty-2",
     name: "Rahul Krishnan",
     role: "Faculty Member",
-    subjects: ["SSLC Mathematics"],
+    subjects: ["SSLC (All Subjects)"],
     experience: "5+ Years",
     bio: "Focuses on board exam preparation with structured practice and personalized doubt-clearing sessions.",
     image: "https://picsum.photos/seed/faculty2/600/800",

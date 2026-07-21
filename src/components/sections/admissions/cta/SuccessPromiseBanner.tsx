@@ -23,7 +23,7 @@ export function SuccessPromiseBanner() {
             We're Ready When You Are.
           </h3>
           <p className="text-white/70 text-lg">
-            Let's build your confidence in mathematics together.
+            Let's build your confidence in their studies together.
           </p>
         </div>
       </div>

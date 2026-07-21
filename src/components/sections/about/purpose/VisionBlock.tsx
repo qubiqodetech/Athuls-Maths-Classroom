@@ -21,7 +21,7 @@ export function VisionBlock() {
           </h3>
           <div className="space-y-6 text-gray-600 text-lg leading-relaxed mb-8">
             <p>
-              To be the most trusted and innovative mathematics learning community, empowering students across regions to achieve their highest potential.
+              To be the most trusted and innovative learning community, empowering students across regions to achieve their highest potential.
             </p>
             <p>
               We envision a future where quality education seamlessly blends with modern technology, creating learning experiences that are highly personalized, engaging, and effective.

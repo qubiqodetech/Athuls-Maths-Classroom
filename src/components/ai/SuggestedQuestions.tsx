@@ -9,7 +9,7 @@ interface SuggestedQuestionsProps {
 
 const QUESTIONS = [
   "Which course should I choose?",
-  "Tell me about SSLC Mathematics.",
+  "Tell me about SSLC (All Subjects).",
   "What are your batch timings?",
   "How do admissions work?",
 ];

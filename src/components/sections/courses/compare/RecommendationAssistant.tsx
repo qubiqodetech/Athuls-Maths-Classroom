@@ -26,7 +26,7 @@ export function RecommendationAssistant() {
             Not Sure Which Program Is Right For You?
           </Heading>
           <Text className="text-gray-600 max-w-xl">
-            Answer a few simple questions or speak with our academic team, and we'll help you choose the best mathematics program for your goals.
+            Answer a few simple questions or speak with our academic team, and we'll help you choose the best academic program for your goals.
           </Text>
         </div>
         

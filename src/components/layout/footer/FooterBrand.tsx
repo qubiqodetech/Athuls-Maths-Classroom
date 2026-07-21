@@ -19,7 +19,7 @@ export function FooterBrand() {
       </Link>
       
       <p className="text-gray-400 text-sm leading-relaxed mb-10 max-w-sm">
-        Elevating mathematics education with premium learning experiences, expert faculty, and exceptional results. A place where concepts meet clarity.
+        Elevating education with premium learning experiences, expert faculty, and exceptional results. A place where concepts meet clarity.
       </p>
       
       <SocialLinks />

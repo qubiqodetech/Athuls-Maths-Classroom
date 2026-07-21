@@ -25,7 +25,7 @@ export function FacultyHeroContent() {
         className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-[#0D1B2A] tracking-tight mb-6 leading-[1.1]"
       >
         Meet The Teachers<br />Who Inspire<br />
-        <span className="text-[#E31E24]">Confidence</span> In Mathematics.
+        <span className="text-[#E31E24]">Confidence</span> in their studies.
       </motion.h1>
 
       <motion.p

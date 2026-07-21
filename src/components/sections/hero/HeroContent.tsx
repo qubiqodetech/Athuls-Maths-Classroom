@@ -17,7 +17,7 @@ export function HeroContent() {
         className="text-[40px] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-tight text-[#0D1B2A] mb-6"
       >
         Building <span className="text-[#E31E24] inline-block">Strong Foundations</span> <br className="hidden md:block" />
-        in Mathematics
+        for Academic Success
       </motion.h1>
 
       <motion.p

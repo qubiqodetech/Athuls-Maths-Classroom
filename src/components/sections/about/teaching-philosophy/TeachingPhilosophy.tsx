@@ -46,7 +46,7 @@ export function TeachingPhilosophy() {
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0D1B2A] leading-tight tracking-tight mb-8"
           >
-            Teaching Mathematics <br className="hidden sm:block" />
+            Empowering Students <br className="hidden sm:block" />
             <span className="text-[#E31E24]">Beyond Memorization.</span>
           </motion.h2>
 
@@ -57,7 +57,7 @@ export function TeachingPhilosophy() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-[650px] mx-auto"
           >
-            Mathematics becomes enjoyable when students truly understand concepts instead of memorizing solutions.
+            Learning becomes enjoyable when students truly understand concepts instead of memorizing solutions.
             <br className="hidden md:block" />
             <br className="hidden md:block" />
             At Athul's Maths Classroom, every lesson is designed to build confidence, strengthen problem-solving ability, and encourage logical thinking.

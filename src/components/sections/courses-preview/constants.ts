@@ -4,7 +4,7 @@ import { CourseType } from "./types";
 export const COURSES: CourseType[] = [
   {
     id: "sslc",
-    title: "SSLC Mathematics",
+    title: "SSLC (All Subjects)",
     description: "Build strong concepts and prepare confidently for the SSLC Board Examination through structured lessons, regular practice, and expert guidance.",
     highlights: ["Concept-Based Learning", "Model Examinations", "Revision Sessions"],
     icon: GraduationCap,
@@ -13,14 +13,14 @@ export const COURSES: CourseType[] = [
   },
   {
     id: "plus-one",
-    title: "Plus One Mathematics",
+    title: "Plus One (All Subjects)",
     description: "Strengthen higher secondary mathematics through systematic teaching, problem-solving strategies, and continuous assessments.",
     highlights: ["Foundation Building", "Weekly Assessments", "Individual Guidance"],
     icon: BookOpen,
   },
   {
     id: "plus-two",
-    title: "Plus Two Mathematics",
+    title: "Plus Two (All Subjects)",
     description: "Master advanced mathematical concepts with focused preparation for board examinations and higher education.",
     highlights: ["Advanced Concepts", "Exam Preparation", "Personal Mentoring"],
     icon: Calculator,

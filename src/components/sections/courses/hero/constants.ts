@@ -17,21 +17,21 @@ export const TRUST_CHIPS: TrustChipType[] = [
 export const COURSE_CARDS: CourseCardType[] = [
   {
     id: "sslc",
-    title: "SSLC Mathematics",
+    title: "SSLC (All Subjects)",
     subtitle: "Class 10",
     description: "Build a strong foundation for your first major board examination.",
     icon: Calculator
   },
   {
     id: "plus-one",
-    title: "Plus One Mathematics",
+    title: "Plus One (All Subjects)",
     subtitle: "Higher Secondary",
     description: "Navigate the transition to higher secondary concepts with confidence.",
     icon: TrendingUp
   },
   {
     id: "plus-two",
-    title: "Plus Two Mathematics",
+    title: "Plus Two (All Subjects)",
     subtitle: "Board Examination",
     description: "Master advanced topics and prepare for academic excellence.",
     icon: Award

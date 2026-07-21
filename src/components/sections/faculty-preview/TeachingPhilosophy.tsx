@@ -12,7 +12,7 @@ export function TeachingPhilosophy() {
       className="max-w-4xl mx-auto mb-12 text-center"
     >
       <h3 className="text-2xl md:text-3xl font-bold text-[#0D1B2A] mb-4">
-        More Than Teaching Mathematics.
+        More Than Empowering Students.
       </h3>
       <p className="text-gray-600 text-lg leading-relaxed">
         Our educators focus on helping students understand concepts, think critically, and approach mathematics with confidence rather than fear.

@@ -38,7 +38,7 @@ export function SectionHeading() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <Text variant="large" className="text-gray-600">
-          Every milestone reflects the confidence placed in us by students and parents. Our greatest achievement has always been helping learners discover confidence in mathematics.
+          Every milestone reflects the confidence placed in us by students and parents. Our greatest achievement has always been helping learners discover confidence in their studies.
         </Text>
       </motion.div>
     </div>

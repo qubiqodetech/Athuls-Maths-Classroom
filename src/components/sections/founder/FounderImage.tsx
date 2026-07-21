@@ -18,7 +18,7 @@ export function FounderImage() {
       <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl shadow-gray-200/60 border-8 border-white bg-gray-100 z-10">
         <Image
           src="https://picsum.photos/seed/athul-founder/1000/1400"
-          alt="Athul - Founder & Mathematics Educator"
+          alt="Athul - Founder Founder & Mathematics Educator Lead Educator"
           fill
           className="object-cover"
           sizes="(max-width: 1024px) 100vw, 45vw"

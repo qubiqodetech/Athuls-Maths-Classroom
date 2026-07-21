@@ -43,12 +43,12 @@ export const facultyData: FacultyMember[] = [
     slug: "athul-krishna",
     designation: "Founder & Lead Educator",
     category: "lead",
-    subjects: ["SSLC Mathematics", "Plus One Mathematics", "Plus Two Mathematics"],
+    subjects: ["SSLC (All Subjects)", "Plus One (All Subjects)", "Plus Two (All Subjects)"],
     yearsOfExperience: "10+",
     qualifications: ["M.Sc Mathematics", "B.Ed"],
-    shortIntro: "Passionate educator dedicated to making mathematics intuitive and enjoyable for every student.",
-    biography: "Athul Krishna is the visionary founder of Athul's Maths Classroom. With over a decade of teaching experience, he has transformed the way students approach mathematics. He believes that math is not about rote memorization, but about understanding the underlying concepts and logical patterns. Under his guidance, hundreds of students have achieved top grades in their board examinations and built a strong foundation for competitive entrance exams.",
-    teachingPhilosophy: "I believe in breaking down complex mathematical concepts into simple, relatable ideas. My goal is to eliminate math anxiety and foster a deep, genuine interest in the subject through logical reasoning and consistent practice.",
+    shortIntro: "Passionate educator dedicated to making learning intuitive and enjoyable for every student.",
+    biography: "Athul Krishna is the visionary founder of Athul's Maths Classroom. With over a decade of teaching experience, he has transformed the way students approach their studies. He believes that learning is not about rote memorization, but about understanding the underlying concepts and logical patterns. Under his guidance, hundreds of students have achieved top grades in their board examinations and built a strong foundation for competitive entrance exams.",
+    teachingPhilosophy: "I believe in breaking down complex mathematical concepts into simple, relatable ideas. My goal is to eliminate exam anxiety and foster a deep, genuine interest in the subject through logical reasoning and consistent practice.",
     achievements: [
       "Mentored 1000+ students across Kerala",
       "Consistent 100% success rate in board exams",
@@ -65,7 +65,7 @@ export const facultyData: FacultyMember[] = [
         description: "Established the premier mathematics institute."
       },
       {
-        title: "Senior Mathematics Teacher",
+        title: "Senior Teacher",
         organization: "Leading Higher Secondary School",
         year: "2010 - 2015",
         description: "Led the mathematics department and produced top district ranks."
@@ -74,14 +74,14 @@ export const facultyData: FacultyMember[] = [
     testimonials: [
       {
         studentName: "Rahul M.",
-        course: "Plus Two Mathematics",
-        content: "Athul sir completely changed my perspective on math. His classes are engaging and concept-focused.",
+        course: "Plus Two (All Subjects)",
+        content: "Athul sir completely changed my perspective on learning. His classes are engaging and concept-focused.",
         achievement: "Scored 100% in Board Exams"
       },
       {
         studentName: "Sneha P.",
         course: "SSLC Foundation",
-        content: "The best math teacher I've ever had. He makes sure no student is left behind.",
+        content: "The best teacher I've ever had. He makes sure no student is left behind.",
         achievement: "A+ in all subjects"
       }
     ]
@@ -97,7 +97,7 @@ export const facultyData: FacultyMember[] = [
     qualifications: ["Ph.D in Applied Mathematics", "M.Sc Mathematics"],
     shortIntro: "Specializes in advanced calculus and competitive exam preparation with a focus on analytical thinking.",
     biography: "Dr. Anjali Nair brings a wealth of academic rigor to AMC. Her doctoral research in Applied Mathematics allows her to explain abstract concepts with real-world applications. She specializes in guiding Plus Two students through the intricacies of Calculus and preparing them for competitive entrance examinations like KEAM and JEE.",
-    teachingPhilosophy: "Mathematics is the language of nature. By connecting theoretical formulas to real-world phenomena, I help students appreciate the beauty of mathematics and develop strong analytical skills.",
+    teachingPhilosophy: "Mathematics is the language of nature. By connecting theoretical formulas to real-world phenomena, I help students appreciate the beauty of science and logic and develop strong analytical skills.",
     achievements: [
       "Published 5 research papers in international journals",
       "Guided 50+ students to top engineering colleges",
@@ -135,9 +135,9 @@ export const facultyData: FacultyMember[] = [
     slug: "rohan-kumar",
     designation: "Academic Mentor & Tutor",
     category: "tutor",
-    subjects: ["SSLC Mathematics", "Algebra Fundamentals"],
+    subjects: ["SSLC (All Subjects)", "Algebra Fundamentals"],
     yearsOfExperience: "3",
-    qualifications: ["B.Tech Computer Science", "Mathematics Enthusiast"],
+    qualifications: ["B.Tech Computer Science", "Academic Enthusiast"],
     shortIntro: "Friendly and approachable mentor who excels at helping students with daily practice and doubt clearing.",
     biography: "Rohan is an energetic academic mentor known for his interactive doubt-clearing sessions. He bridges the gap between classroom teaching and home practice, ensuring students stay on track with their assignments and understand their mistakes.",
     teachingPhilosophy: "Practice makes perfect, but only when practiced correctly. My role is to guide students through their practice sessions, correcting mistakes instantly and building their confidence.",
@@ -163,7 +163,7 @@ export const facultyData: FacultyMember[] = [
         studentName: "Abhirami S.",
         course: "SSLC Crash Course",
         content: "Rohan chettan helped me clear all my doubts before the exams. Very patient and helpful.",
-        achievement: "Scored A+ in Math"
+        achievement: "Scored A+"
       }
     ]
   }

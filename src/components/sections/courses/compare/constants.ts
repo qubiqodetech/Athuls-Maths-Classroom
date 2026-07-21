@@ -3,7 +3,7 @@ import { ComparisonProgram } from "./types"
 export const COMPARISON_PROGRAMS: ComparisonProgram[] = [
   {
     id: "sslc",
-    name: "SSLC Mathematics",
+    name: "SSLC (All Subjects)",
     targetClass: "Class 10",
     idealFor: "First-time board exam takers",
     duration: "1 Academic Year",
@@ -18,7 +18,7 @@ export const COMPARISON_PROGRAMS: ComparisonProgram[] = [
   },
   {
     id: "plus-one",
-    name: "Plus One Mathematics",
+    name: "Plus One (All Subjects)",
     targetClass: "Class 11",
     idealFor: "Science & Commerce students",
     duration: "1 Academic Year",
@@ -33,7 +33,7 @@ export const COMPARISON_PROGRAMS: ComparisonProgram[] = [
   },
   {
     id: "plus-two",
-    name: "Plus Two Mathematics",
+    name: "Plus Two (All Subjects)",
     targetClass: "Class 12",
     idealFor: "Final board exam takers",
     duration: "1 Academic Year",

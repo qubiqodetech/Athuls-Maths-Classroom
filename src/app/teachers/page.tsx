@@ -5,7 +5,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Teachers | Athul's Maths Classroom",
-  description: "Learn from the best mathematics teachers in Kerala. Expert faculty dedicated to academic excellence.",
+  description: "Learn from the best teachers in Kerala. Expert faculty dedicated to academic excellence.",
 }
 
 export default function TeachersPage() {
@@ -14,7 +14,7 @@ export default function TeachersPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       <PageHero 
-        title="Expert Mathematics Teachers"
+        title="Expert Teachers"
         subtitle="Core Faculty"
         description="Learn from highly qualified educators with a proven track record of helping students achieve 100% success in board and competitive exams."
         primaryCta={{ label: "Apply for Admission", href: "/admissions" }}

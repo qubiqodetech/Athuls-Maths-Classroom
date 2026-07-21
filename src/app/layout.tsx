@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     template: "%s | Athul's Maths Classroom",
     default: "Athul's Maths Classroom | Next Generation Educational Platform",
   },
-  description: "Transforming mathematics education with premium learning experiences, expert faculty, and exceptional results in Kerala.",
-  keywords: ["Mathematics", "Tuition", "Kerala", "Maths Classes", "Athul's Maths Classroom", "Education"],
+  description: "Transforming education with premium learning experiences, expert faculty, and exceptional results in Kerala.",
+  keywords: ["Tuition", "Kerala", "Athul's Maths Classroom", "Education"],
   authors: [{ name: "Athul's Maths Classroom" }],
   creator: "Athul's Maths Classroom",
   publisher: "Athul's Maths Classroom",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Athul's Maths Classroom",
-    description: "Transforming mathematics education with premium learning experiences, expert faculty, and exceptional results in Kerala.",
+    description: "Transforming education with premium learning experiences, expert faculty, and exceptional results in Kerala.",
     url: "https://athulsmathsclassroom.com",
     siteName: "Athul's Maths Classroom",
     locale: "en_IN",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Athul's Maths Classroom",
-    description: "Transforming mathematics education with premium learning experiences.",
+    description: "Transforming education with premium learning experiences.",
     images: ["/assets/logos/amc-logo/AMC - Primary Horizontal Logo (Dark Background).png"],
   },
   icons: {

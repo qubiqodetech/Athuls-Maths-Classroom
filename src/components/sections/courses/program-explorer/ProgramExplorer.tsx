@@ -50,7 +50,7 @@ export function ProgramExplorer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Text variant="large" className="text-gray-600 max-w-[700px] leading-relaxed">
-              Every mathematics program at Athul's Maths Classroom is carefully designed to match your academic level, strengthen conceptual understanding, and prepare you for examination success.
+              Every academic program at Athul's Maths Classroom is carefully designed to match your academic level, strengthen conceptual understanding, and prepare you for examination success.
             </Text>
           </motion.div>
         </div>

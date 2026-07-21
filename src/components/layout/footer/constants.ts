@@ -23,9 +23,9 @@ export const QUICK_LINKS: FooterLinkType[] = [
 ];
 
 export const PROGRAMS: FooterLinkType[] = [
-  { label: "SSLC Mathematics", href: "/courses/sslc" },
-  { label: "Plus One Mathematics", href: "/courses/plus-one" },
-  { label: "Plus Two Mathematics", href: "/courses/plus-two" },
+  { label: "SSLC (All Subjects)", href: "/courses/sslc" },
+  { label: "Plus One (All Subjects)", href: "/courses/plus-one" },
+  { label: "Plus Two (All Subjects)", href: "/courses/plus-two" },
   { label: "Revision Programs", href: "/courses/revision" },
   { label: "Crash Courses", href: "/courses/crash-course" },
   { label: "Admissions", href: "/admissions" },

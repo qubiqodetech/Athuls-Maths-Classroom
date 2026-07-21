@@ -39,7 +39,7 @@ export function StoryContent() {
         className="mb-16 pb-16 border-b border-gray-100 relative"
       >
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium mb-6">
-          Every student has the ability to succeed in mathematics.
+          Every student has the ability to succeed in their studies.
         </p>
         <p className="text-lg text-gray-600 leading-relaxed mb-6">
           The challenge is not mathematics itself—it is finding the right guidance, encouragement, and learning environment.
