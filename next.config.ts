@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // @ts-expect-error - undocumented property in next 15 for dev origins
+  // undocumented property in next 15 for dev origins
   allowedDevOrigins: [
     'ais-dev-ondbyhsbvgrfeoplngdulx-819516856011.asia-east1.run.app'
   ],
