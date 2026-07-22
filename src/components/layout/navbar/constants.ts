@@ -29,7 +29,6 @@ export const NAVIGATION_ITEMS: NavItem[] = [
       { label: "Results", href: "/results" },
       { label: "Gallery", href: "/gallery" },
       { label: "Announcements", href: "/announcements" },
-      { label: "Resources", href: "/resources" },
       { label: "FAQ", href: "/faq" },
     ]
   },

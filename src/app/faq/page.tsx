@@ -1,14 +1,23 @@
 import { Metadata } from "next"
+import { FAQSection } from "@/src/components/sections/courses/faq/FAQSection"
+import { BreadcrumbSchema } from "@/src/components/seo/BreadcrumbSchema"
 
 export const metadata: Metadata = {
-  title: "FAQ",
-  description: "Frequently asked questions about Athul's Maths Classroom.",
+  title: "FAQ | Athul's Maths Classroom",
+  description: "Frequently asked questions about Athul's Maths Classroom. Find answers to common queries about courses, admissions, and more.",
 }
 
 export default function FAQPage() {
   return (
-    <div className="container mx-auto py-24 flex items-center justify-center min-h-[50vh]">
-      <h1 className="font-display text-4xl font-bold tracking-tight">FAQ</h1>
-    </div>
+    <main className="min-h-screen bg-gray-50 flex flex-col w-full overflow-hidden">
+      <BreadcrumbSchema 
+        items={[
+          { name: "Home", item: "https://athulsmathsclassroom.com" },
+          { name: "FAQ", item: "https://athulsmathsclassroom.com/faq" }
+        ]} 
+      />
+      <FAQSection />
+    </main>
   )
 }
+

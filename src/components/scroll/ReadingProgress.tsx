@@ -17,7 +17,7 @@ export function ReadingProgress() {
   })
 
   useEffect(() => {
-    const showOnPages = ['/about', '/courses', '/faculty', '/resources', '/privacy-policy', '/terms-and-conditions', '/news', '/announcements']
+    const showOnPages = ['/about', '/courses', '/faculty', '/privacy-policy', '/terms-and-conditions', '/news', '/announcements']
     const shouldShow = showOnPages.some(page => pathname.startsWith(page))
     setIsVisible(shouldShow)
   }, [pathname])

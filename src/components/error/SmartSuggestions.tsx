@@ -30,9 +30,9 @@ const suggestions = [
     bg: "bg-blue-50",
   },
   {
-    title: "Student Resources",
-    description: "Access study materials and learning guides.",
-    href: "/resources",
+    title: "Contact Us",
+    description: "Get in touch with our team for any queries.",
+    href: "/contact",
     icon: BookMarked,
     color: "text-purple-500",
     bg: "bg-purple-50",
