@@ -1,38 +1,59 @@
+"use client"
+
+import { motion } from "motion/react"
 import { Container } from "@/src/components/layout/container"
-import { HeroContent } from "./HeroContent"
-import { CourseNavigator } from "./CourseNavigator"
-import { FloatingStats } from "./FloatingStats"
-import { ScrollIndicator } from "./ScrollIndicator"
 
 export function CoursesHero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-32 pb-24 overflow-hidden bg-white">
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-24 bg-[#0D1B2A] overflow-hidden border-b border-gray-800">
       {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Soft radial gradients */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-navy-900/[0.03] via-transparent to-transparent" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary-red/[0.03] via-transparent to-transparent" />
-        
-        {/* Subtle graph grid */}
-        <div className="absolute inset-0 bg-[url('/assets/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.02]" />
-        
-        {/* Abstract decorative shapes */}
-        <div className="absolute top-1/4 right-[10%] w-96 h-96 bg-primary-red/5 rounded-full mix-blend-multiply filter blur-3xl opacity-50" />
-        <div className="absolute bottom-1/4 left-[10%] w-[500px] h-[500px] bg-blue-500/5 rounded-full mix-blend-multiply filter blur-3xl opacity-50" />
-      </div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/30 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-red-900/20 via-transparent to-transparent pointer-events-none" />
+      
+      {/* Grid Pattern */}
+      <svg className="absolute inset-0 w-full h-full opacity-[0.05] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="courses-hero-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" className="text-white" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#courses-hero-grid)" />
+      </svg>
 
       <Container className="relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-16 lg:gap-8 items-center">
-          <HeroContent />
+        <div className="text-center max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-6"
+          >
+            <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-white text-xs font-bold tracking-widest uppercase border border-white/20">
+              Academic Programs
+            </span>
+          </motion.div>
           
-          <div className="relative w-full flex justify-center lg:justify-end">
-            <CourseNavigator />
-            <FloatingStats />
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6"
+          >
+            Discover the Perfect <br className="hidden sm:block" />
+            <span className="text-[#E31E24]">Course for You</span>
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto"
+          >
+            Explore our meticulously designed programs tailored for SSLC and Higher Secondary students to ensure deep conceptual understanding and outstanding results.
+          </motion.p>
         </div>
       </Container>
-
-      <ScrollIndicator />
     </section>
   )
 }
+
