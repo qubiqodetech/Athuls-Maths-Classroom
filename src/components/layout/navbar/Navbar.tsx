@@ -6,6 +6,7 @@ import { AnnouncementBar } from "./AnnouncementBar";
 import { NavbarLogo } from "./NavbarLogo";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { NavbarSearch } from "./NavbarSearch";
+import { NavbarCall } from "./NavbarCall";
 import { NavbarCTA } from "./NavbarCTA";
 import { MobileNavigation } from "./MobileNavigation";
 import { cn } from "@/src/lib/utils";
@@ -57,8 +58,9 @@ export function Navbar() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-2 md:gap-4 lg:gap-6">
-            <div className="hidden sm:block">
+            <div className="hidden sm:flex items-center gap-1">
               <NavbarSearch scrolled={scrolled} />
+              <NavbarCall scrolled={scrolled} />
             </div>
             
             <NavbarCTA scrolled={scrolled} />

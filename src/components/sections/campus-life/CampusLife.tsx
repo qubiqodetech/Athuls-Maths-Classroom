@@ -1,6 +1,5 @@
 import { CampusHeading } from "./CampusHeading";
 import { EditorialGallery } from "./EditorialGallery";
-import { FeaturedEvent } from "./FeaturedEvent";
 import { LearningTimeline } from "./LearningTimeline";
 import { GalleryCTA } from "./GalleryCTA";
 
@@ -21,7 +20,6 @@ export function CampusLife() {
         <EditorialGallery />
         
         <div className="px-4">
-          <FeaturedEvent />
           <LearningTimeline />
           <GalleryCTA />
         </div>

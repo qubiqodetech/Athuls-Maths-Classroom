@@ -13,13 +13,19 @@ export const QUICK_LINKS: FooterLinkType[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Courses", href: "/courses" },
+  { label: "Faculty", href: "/faculty" },
   { label: "Teachers", href: "/teachers" },
+  { label: "Tutors", href: "/tutors" },
   { label: "Results", href: "/results" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Testimonials", href: "/testimonials" },
+  { label: "Announcements", href: "/announcements" },
+  { label: "Resources", href: "/resources" },
   { label: "FAQ", href: "/faq" },
+  { label: "Careers", href: "/careers" },
   { label: "Admissions", href: "/admissions" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
 ];
 
 export const PROGRAMS: FooterLinkType[] = [

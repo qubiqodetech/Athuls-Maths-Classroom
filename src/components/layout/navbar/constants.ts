@@ -2,9 +2,21 @@ import { NavItem } from "./types";
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { 
+    label: "About", 
+    href: "/about",
+    children: [
+      { label: "Our Story", href: "/about" },
+      { label: "Faculty", href: "/faculty" },
+      { label: "Teachers", href: "/teachers" },
+      { label: "Tutors", href: "/tutors" },
+      { label: "Careers", href: "/careers" },
+    ]
+  },
+  { 
     label: "Courses", 
     href: "/courses",
     children: [
+      { label: "All Courses", href: "/courses" },
       { label: "SSLC (All Subjects)", href: "/courses/sslc" },
       { label: "Plus One (All Subjects)", href: "/courses/plus-one" },
       { label: "Plus Two (All Subjects)", href: "/courses/plus-two" },
@@ -12,18 +24,17 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     ]
   },
   { 
-    label: "About", 
-    href: "/about",
+    label: "Explore", 
+    href: "/gallery",
     children: [
-      { label: "Our Story", href: "/about" },
-      { label: "Faculty & Tutors", href: "/faculty" },
+      { label: "Results", href: "/results" },
       { label: "Gallery", href: "/gallery" },
-      { label: "News & Events", href: "/announcements" },
+      { label: "Announcements", href: "/announcements" },
+      { label: "Resources", href: "/resources" },
+      { label: "FAQ", href: "/faq" },
     ]
   },
-  { label: "Faculty", href: "/faculty" },
-  { label: "Resources", href: "/resources" },
-  { label: "Results", href: "/results" },
+  { label: "Admissions", href: "/admissions" },
   { label: "Contact", href: "/contact" },
 ];
 

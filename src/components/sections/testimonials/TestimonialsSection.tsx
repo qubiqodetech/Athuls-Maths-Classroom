@@ -1,17 +1,14 @@
 "use client";
 
-import { useState } from "react";
+
 import { TestimonialsHeading } from "./TestimonialsHeading";
 import { FeaturedTestimonial } from "./FeaturedTestimonial";
-import { ReviewFilters } from "./ReviewFilters";
-import { TestimonialGrid } from "./TestimonialGrid";
-import { VideoTestimonial } from "./VideoTestimonial";
-import { TrustMetrics } from "./TrustMetrics";
-import { CommunityQuote } from "./CommunityQuote";
+import { TestimonialMarquee } from "./TestimonialMarquee";
+
 import { TestimonialsCTA } from "./TestimonialsCTA";
 
 export function TestimonialsSection() {
-  const [activeFilter, setActiveFilter] = useState("all");
+  
 
   return (
     <section className="relative py-12 lg:py-16 bg-[#FAFAFA] overflow-hidden border-b border-gray-100">
@@ -24,16 +21,9 @@ export function TestimonialsSection() {
         <TestimonialsHeading />
         <FeaturedTestimonial />
         
-        <ReviewFilters 
-          activeFilter={activeFilter} 
-          onFilterChange={setActiveFilter} 
-        />
         
-        <TestimonialGrid activeFilter={activeFilter} />
+        <TestimonialMarquee />
         
-        <VideoTestimonial />
-        <TrustMetrics />
-        <CommunityQuote />
         <TestimonialsCTA />
       </div>
     </section>
