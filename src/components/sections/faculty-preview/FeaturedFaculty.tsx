@@ -55,7 +55,7 @@ export function FeaturedFaculty() {
             "{FEATURED_FACULTY.bio}"
           </p>
           
-          <Link href="/teachers">
+          <Link href="/faculty">
             <motion.button
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}

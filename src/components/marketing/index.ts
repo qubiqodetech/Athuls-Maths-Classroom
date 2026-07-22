@@ -1,7 +1,6 @@
 export * from "./hero"
 export * from "./trust"
 export * from "./courses"
-export * from "./teachers"
 export * from "./results"
 export * from "./gallery"
 export * from "./testimonials"

@@ -14,7 +14,6 @@ export const QUICK_LINKS: FooterLinkType[] = [
   { label: "About", href: "/about" },
   { label: "Courses", href: "/courses" },
   { label: "Faculty", href: "/faculty" },
-  { label: "Teachers", href: "/teachers" },
   { label: "Tutors", href: "/tutors" },
   { label: "Results", href: "/results" },
   { label: "Gallery", href: "/gallery" },

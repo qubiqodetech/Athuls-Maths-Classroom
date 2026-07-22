@@ -63,7 +63,7 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
               <Input
                 ref={inputRef}
                 type="search"
-                placeholder="Search courses, teachers, results..."
+                placeholder="Search courses, faculty, results..."
                 className="w-full h-16 pl-14 pr-4 text-xl md:text-2xl rounded-2xl border-2 border-primary/10 focus-visible:ring-primary focus-visible:border-primary shadow-lg bg-background"
               />
             </motion.div>

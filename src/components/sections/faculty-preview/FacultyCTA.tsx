@@ -21,7 +21,7 @@ export function FacultyCTA() {
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <Link href="/teachers" className="w-full sm:w-auto">
+        <Link href="/faculty" className="w-full sm:w-auto">
           <motion.div
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.98 }}

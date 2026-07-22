@@ -23,7 +23,7 @@ export function FounderCTA() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-        <Link href="/teachers" className="w-full sm:w-auto">
+        <Link href="/faculty" className="w-full sm:w-auto">
           <motion.button
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.98 }}

@@ -61,7 +61,7 @@ export function FacultyCard({ faculty, index }: FacultyCardProps) {
           )}
         </div>
         
-        <Link href="/teachers" className="mt-auto block">
+        <Link href="/faculty" className="mt-auto block">
           <button className="w-full flex items-center justify-center gap-2 py-3 bg-gray-50 text-[#0D1B2A] rounded-xl font-bold text-sm border border-gray-100 hover:border-gray-200 hover:bg-gray-100 transition-all group-hover:bg-[#0D1B2A] group-hover:text-white group-hover:border-transparent">
             View Profile
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

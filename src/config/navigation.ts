@@ -12,8 +12,8 @@ export const navigationLinks = [
     href: "/courses",
   },
   {
-    title: "Teachers",
-    href: "/teachers",
+    title: "Faculty",
+    href: "/faculty",
   },
   {
     title: "Tutors",

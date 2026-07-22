@@ -7,7 +7,6 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     children: [
       { label: "Our Story", href: "/about" },
       { label: "Faculty", href: "/faculty" },
-      { label: "Teachers", href: "/teachers" },
       { label: "Tutors", href: "/tutors" },
       { label: "Careers", href: "/careers" },
     ]

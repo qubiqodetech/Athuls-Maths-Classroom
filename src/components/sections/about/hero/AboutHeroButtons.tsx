@@ -23,7 +23,7 @@ export function AboutHeroButtons() {
         </motion.div>
       </Link>
       
-      <Link href="/teachers" className="w-full sm:w-auto">
+      <Link href="/faculty" className="w-full sm:w-auto">
         <motion.div
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.98 }}
