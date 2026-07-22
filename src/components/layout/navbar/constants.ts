@@ -16,10 +16,10 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     href: "/courses",
     children: [
       { label: "All Courses", href: "/courses" },
-      { label: "SSLC (All Subjects)", href: "/courses/sslc" },
-      { label: "Plus One (All Subjects)", href: "/courses/plus-one" },
-      { label: "Plus Two (All Subjects)", href: "/courses/plus-two" },
-      { label: "Entrance Coaching", href: "/courses/entrance" },
+      { label: "SSLC (All Subjects)", href: "/courses/sslc-mathematics-foundation" },
+      { label: "Plus One (All Subjects)", href: "/courses/plus-one-mathematics" },
+      { label: "Plus Two (All Subjects)", href: "/courses/plus-two-mathematics" },
+      { label: "Entrance Coaching", href: "/courses/entrance-coaching" },
     ]
   },
   { 

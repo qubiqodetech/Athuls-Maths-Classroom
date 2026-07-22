@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { ResultsHero } from "@/src/components/sections/results/hero"
 import { ResultsShowcase } from "@/src/components/sections/results/showcase"
 import { ResultsArchive } from "@/src/components/sections/results/archive"
-import { ResultsCTA } from "@/src/components/sections/results/cta"
 
 export const metadata: Metadata = {
   title: "Results",
@@ -15,7 +14,6 @@ export default function ResultsPage() {
       <ResultsHero />
       <ResultsShowcase />
       <ResultsArchive />
-      <ResultsCTA />
     </main>
   )
 }

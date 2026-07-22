@@ -2,8 +2,6 @@ import { Metadata } from "next"
 import { GalleryHero } from "@/src/components/sections/gallery/hero"
 import { EditorialGallery } from "@/src/components/sections/gallery/editorial"
 import { EventsSection } from "@/src/components/sections/gallery/events"
-import { VideoStories } from "@/src/components/sections/gallery/videos"
-import { GalleryCTA } from "@/src/components/sections/gallery/cta"
 
 export const metadata: Metadata = {
   title: "Gallery | Athul's Maths Classroom",
@@ -16,8 +14,6 @@ export default function GalleryPage() {
       <GalleryHero />
       <EditorialGallery />
       <EventsSection />
-      <VideoStories />
-      <GalleryCTA />
     </main>
   )
 }

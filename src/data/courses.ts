@@ -167,6 +167,42 @@ export const coursesData: Course[] = [
     faqs: [
       { question: "When does the crash course start?", answer: "Usually in January, two months prior to the board exams." }
     ]
+  },
+  {
+    id: "5",
+    title: "Entrance Coaching (KEAM/JEE/NEET)",
+    slug: "entrance-coaching",
+    category: "higher-secondary",
+    shortDescription: "Comprehensive entrance coaching designed to help you secure admissions in top professional colleges.",
+    description: "Our dedicated Entrance Coaching program provides intensive preparation for medical and engineering entrance exams like KEAM, JEE, and NEET. We focus on advanced problem-solving techniques, time management, and deep conceptual clarity.",
+    targetClass: "Class 11 & 12",
+    duration: "1-2 Years",
+    mode: "Offline",
+    featured: true,
+    imageSrc: "https://picsum.photos/seed/course-entrance/1200/800",
+    imageAlt: "Students preparing for entrance exams",
+    highlights: [
+      "Expert faculty for all subjects",
+      "Extensive question banks",
+      "Regular mock tests and analysis",
+      "Doubt clearance sessions"
+    ],
+    topics: [
+      { title: "Advanced Physics", description: "In-depth mechanics, electromagnetism, and modern physics." },
+      { title: "Advanced Chemistry", description: "Physical, organic, and inorganic chemistry for competitive exams." },
+      { title: "Mathematics (JEE/KEAM)", description: "Complex problem-solving in calculus, algebra, and coordinate geometry." },
+      { title: "Biology (NEET)", description: "Detailed study of botany and zoology." }
+    ],
+    outcomes: [
+      { title: "High Ranks", description: "Targeting top ranks in state and national level entrance exams." },
+      { title: "Speed and Accuracy", description: "Mastering the art of solving complex problems quickly." },
+      { title: "Exam Strategy", description: "Developing effective strategies for different exam patterns." },
+      { title: "Confidence", description: "Building the confidence to face highly competitive exams." }
+    ],
+    faqs: [
+      { question: "Do you provide separate coaching for NEET and JEE?", answer: "Yes, we have specialized batches tailored for medical and engineering aspirants." },
+      { question: "Are study materials included?", answer: "Yes, we provide comprehensive, up-to-date study materials and mock test series." }
+    ]
   }
 ];
 
