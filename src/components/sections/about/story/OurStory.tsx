@@ -6,7 +6,7 @@ import { DecorativeDivider } from "./DecorativeDivider";
 
 export function OurStory() {
   return (
-    <section id="our-journey" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section id="our-journey" className="py-12 lg:py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_450px] gap-16 lg:gap-8 items-start">
           <StoryContent />

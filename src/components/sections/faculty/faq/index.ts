@@ -1,6 +1,0 @@
-export * from "./FaqSection"
-export * from "./FaqSearch"
-export * from "./FaqCategories"
-export * from "./FaqList"
-export * from "./ContactCard"
-export * from "./constants"

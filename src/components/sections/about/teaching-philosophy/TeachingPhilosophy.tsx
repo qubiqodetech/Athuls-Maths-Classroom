@@ -10,7 +10,7 @@ import { SectionDivider } from "./SectionDivider";
 
 export function TeachingPhilosophy() {
   return (
-    <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
+    <section className="relative py-12 lg:py-20 bg-white overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent opacity-80 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-gray-50 via-transparent to-transparent opacity-50 pointer-events-none" />
