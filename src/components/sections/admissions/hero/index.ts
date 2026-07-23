@@ -1,3 +1,2 @@
-import { ContactHero } from "./ContactHero";
-
-export { ContactHero };
+export { AdmissionsHero } from "./AdmissionsHero";
+export { ContactHero } from "./ContactHero";

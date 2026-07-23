@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { ContactHero } from "@/src/components/sections/admissions/hero"
+import { AdmissionsHero } from "@/src/components/sections/admissions/hero"
 import { SmartAdmissionForm } from "@/src/components/forms/smart-admission-form"
 import { FinalAdmissionsCTA } from "@/src/components/sections/admissions/cta"
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AdmissionsPage() {
   return (
     <main className="flex min-h-screen flex-col w-full overflow-hidden bg-light-gray">
-      <ContactHero />
+      <AdmissionsHero />
       <section className="py-24 px-4 md:px-6 relative z-10 -mt-10" id="process">
         <div className="container mx-auto">
           <div className="text-center mb-12">
