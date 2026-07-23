@@ -89,36 +89,37 @@ export function GlobalSearch() {
 
           {/* Modal */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            initial={{ opacity: 0, scale: 0.98, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-[900px] mx-4 overflow-hidden rounded-2xl bg-white/90 dark:bg-[#050816]/90 backdrop-blur-xl shadow-2xl border border-gray-200 dark:border-white/10"
+            exit={{ opacity: 0, scale: 0.98, y: 10 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full max-w-2xl mx-4 overflow-hidden rounded-3xl bg-white/95 dark:bg-[#050816]/95 backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100 dark:border-white/10"
           >
             <Command 
-              className="w-full flex flex-col h-full max-h-[60vh] bg-transparent"
+              className="w-full flex flex-col h-full max-h-[70vh] bg-transparent"
               label="Global Search"
             >
-              <div className="flex items-center px-4 py-4 border-b border-gray-200 dark:border-white/10 relative">
-                <Search className="w-6 h-6 text-gray-400 shrink-0 mr-3" />
+              <div className="flex items-center px-6 py-5 border-b border-gray-100 dark:border-white/5 relative">
+                <Search className="w-5 h-5 text-[#E31E24] shrink-0 mr-4" />
                 <Command.Input 
                   autoFocus
-                  placeholder="Search courses, faculty, results..." 
-                  className="w-full bg-transparent text-xl md:text-2xl outline-none placeholder:text-gray-400 dark:text-white"
+                  placeholder="What do you need help finding?" 
+                  className="w-full bg-transparent text-xl outline-none placeholder:text-gray-400 text-[#0D1B2A] dark:text-white font-medium"
                 />
-                <div className="absolute right-4 flex gap-1 hidden sm:flex">
-                  <kbd className="px-2 py-1 text-xs font-mono font-medium rounded border border-gray-200 dark:border-white/20 bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-400">
+                <div className="absolute right-6 flex items-center gap-2 hidden sm:flex">
+                  <span className="text-xs text-gray-400 font-medium mr-1">to close</span>
+                  <kbd className="px-2 py-1 text-[10px] font-mono font-bold rounded-md border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-500 shadow-sm">
                     ESC
                   </kbd>
                 </div>
               </div>
 
-              <Command.List className="overflow-y-auto p-2 overscroll-contain">
-                <Command.Empty className="py-14 text-center">
+              <Command.List className="overflow-y-auto p-3 overscroll-contain">
+                <Command.Empty className="py-16 text-center">
                   <div className="flex flex-col items-center justify-center text-gray-500">
-                    <Search className="w-12 h-12 text-gray-300 dark:text-gray-700 mb-4" />
-                    <p className="text-lg font-medium text-gray-900 dark:text-white mb-1">No results found</p>
-                    <p className="text-sm">We couldn't find anything matching your search.</p>
+                    <Search className="w-10 h-10 text-gray-200 dark:text-gray-800 mb-4" />
+                    <p className="text-base font-semibold text-[#0D1B2A] dark:text-white mb-1">No results found</p>
+                    <p className="text-sm text-gray-500">We couldn't find anything matching your search.</p>
                   </div>
                 </Command.Empty>
 
@@ -126,26 +127,29 @@ export function GlobalSearch() {
                   <Command.Group 
                     key={group.heading} 
                     heading={group.heading}
-                    className="px-2 py-2 text-sm font-medium text-gray-500 dark:text-gray-400"
+                    className="px-2 py-3 text-xs font-semibold tracking-wider uppercase text-gray-400 dark:text-gray-500 [&_[cmdk-group-heading]]:mb-3 [&_[cmdk-group-heading]]:px-2"
                   >
                     {group.items.map((item) => (
                       <Command.Item
                         key={item.id}
                         onSelect={() => runCommand(() => router.push(item.href))}
-                        className="flex items-center gap-4 px-4 py-3 mt-1 rounded-xl cursor-pointer aria-selected:bg-gray-100 dark:aria-selected:bg-white/10 transition-colors group"
+                        className="flex items-center gap-4 px-4 py-3 rounded-2xl cursor-pointer aria-selected:bg-gray-50 dark:aria-selected:bg-white/5 aria-selected:shadow-sm transition-all duration-200 group relative"
                       >
-                        <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-300 group-aria-selected:bg-primary/10 group-aria-selected:text-primary transition-colors">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-white dark:bg-[#0D1B2A] border border-gray-100 dark:border-white/10 text-gray-500 dark:text-gray-400 group-aria-selected:border-gray-200 group-aria-selected:text-[#0D1B2A] dark:group-aria-selected:text-white transition-colors shadow-sm">
                           <item.icon className="w-5 h-5" />
                         </div>
                         <div className="flex-1 flex flex-col">
-                          <span className="text-base font-medium text-gray-900 dark:text-white group-aria-selected:text-primary transition-colors">
+                          <span className="text-sm font-semibold text-[#0D1B2A] dark:text-white group-aria-selected:text-[#E31E24] transition-colors">
                             {item.title}
                           </span>
-                          <span className="text-sm text-gray-500 dark:text-gray-400">
+                          <span className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 font-medium">
                             {item.desc}
                           </span>
                         </div>
-                        <ArrowRight className="w-5 h-5 text-gray-300 dark:text-gray-600 opacity-0 group-aria-selected:opacity-100 transition-opacity" />
+                        <div className="flex items-center opacity-0 group-aria-selected:opacity-100 transition-opacity">
+                          <span className="text-xs font-medium text-gray-400 mr-2">Go to</span>
+                          <ArrowRight className="w-4 h-4 text-[#E31E24]" />
+                        </div>
                       </Command.Item>
                     ))}
                   </Command.Group>
