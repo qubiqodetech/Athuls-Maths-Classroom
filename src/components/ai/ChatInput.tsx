@@ -1,16 +1,17 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { motion } from "motion/react";
 import { Send, Sparkles } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/src/lib/utils";
 
 interface ChatInputProps {
   onSubmit: (message: string) => void;
   isLoading: boolean;
+  isDark: boolean;
 }
 
-export function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
+export function ChatInput({ onSubmit, isLoading, isDark }: ChatInputProps) {
   const [input, setInput] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -36,16 +37,27 @@ export function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
   }, [input]);
 
   return (
-    <div className="p-4 pt-2 pb-5 bg-white rounded-b-3xl shrink-0">
+    <div className={cn(
+      "p-3 rounded-2xl relative transition-colors duration-300",
+      isDark ? "bg-[#1E293B]/80 backdrop-blur-xl border border-white/10" : "bg-white/80 backdrop-blur-xl border border-gray-100 shadow-sm"
+    )}>
       <form onSubmit={handleSubmit} className="relative flex items-end gap-2">
-        <div className="relative flex-1 bg-gray-50/80 border border-gray-200/80 rounded-2xl focus-within:border-[#0D1B2A]/30 focus-within:ring-4 focus-within:ring-[#0D1B2A]/5 focus-within:bg-white transition-all overflow-hidden shadow-sm">
+        <div className={cn(
+          "relative flex-1 rounded-xl transition-all overflow-hidden flex",
+          isDark 
+            ? "bg-[#0F172A] border border-white/5 focus-within:border-white/20 focus-within:bg-[#0F172A]" 
+            : "bg-gray-50 border border-gray-200/80 focus-within:border-[#0D1B2A]/20 focus-within:bg-white"
+        )}>
           <textarea
             ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Ask anything..."
-            className="w-full max-h-[120px] py-3.5 pl-4 pr-12 bg-transparent border-none resize-none focus:outline-none focus:ring-0 text-[15px] text-gray-900 placeholder:text-gray-400 font-medium"
+            className={cn(
+              "w-full max-h-[120px] py-3.5 pl-4 pr-3 bg-transparent border-none resize-none focus:outline-none focus:ring-0 text-[15px] font-medium leading-relaxed",
+              isDark ? "text-gray-100 placeholder:text-gray-500" : "text-gray-900 placeholder:text-gray-400"
+            )}
             rows={1}
             disabled={isLoading}
           />
@@ -56,10 +68,10 @@ export function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className={cn(
-            "p-3 rounded-2xl flex items-center justify-center shrink-0 transition-all h-[52px] w-[52px]",
+            "p-3 rounded-xl flex items-center justify-center shrink-0 transition-all h-[52px] w-[52px]",
             input.trim() && !isLoading
-              ? "bg-[#0D1B2A] text-white shadow-md shadow-[#0D1B2A]/20 hover:bg-[#1a2c42]"
-              : "bg-gray-100/80 text-gray-400 cursor-not-allowed"
+              ? (isDark ? "bg-white text-[#0F172A] hover:bg-gray-200 shadow-lg" : "bg-[#0D1B2A] text-white shadow-md shadow-[#0D1B2A]/20 hover:bg-[#1a2c42]")
+              : (isDark ? "bg-[#334155] text-gray-500 cursor-not-allowed" : "bg-gray-100 text-gray-400 cursor-not-allowed")
           )}
         >
           {isLoading ? (
@@ -74,8 +86,11 @@ export function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
           )}
         </motion.button>
       </form>
-      <div className="mt-3.5 text-center">
-        <p className="text-[11px] text-gray-400 font-medium">
+      <div className="mt-2.5 text-center">
+        <p className={cn(
+          "text-[10px] font-medium transition-colors",
+          isDark ? "text-gray-500" : "text-gray-400"
+        )}>
           AI may produce inaccurate information. Please verify important details.
         </p>
       </div>

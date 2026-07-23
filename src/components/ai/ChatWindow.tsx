@@ -7,13 +7,16 @@ import { ChatInput } from "./ChatInput";
 import { MessageBubble } from "./MessageBubble";
 import { EmptyState } from "./EmptyState";
 import { SuggestedQuestions } from "./SuggestedQuestions";
+import { cn } from "@/src/lib/utils";
 
 interface ChatWindowProps {
   isOpen: boolean;
   onClose: () => void;
+  isDark: boolean;
+  toggleTheme: () => void;
 }
 
-export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
+export function ChatWindow({ isOpen, onClose, isDark, toggleTheme }: ChatWindowProps) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<{ id: string, role: string, content: string }[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,9 +57,9 @@ export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
       while (!done) {
         const { value, done: doneReading } = await reader.read();
         done = doneReading;
+        
         if (value) {
           const chunkString = decoder.decode(value, { stream: true });
-          // Very simple parser for Vercel AI SDK data stream
           const lines = chunkString.split('\n');
           for (const line of lines) {
             if (line.startsWith('0:')) {
@@ -65,7 +68,7 @@ export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
                 assistantMessageContent += text;
                 setMessages((prev) => prev.map((msg) => msg.id === assistantMessageId ? { ...msg, content: assistantMessageContent } : msg));
               } catch (e) {
-                // ignore JSON parse errors for incomplete chunks
+                // ignore
               }
             }
           }
@@ -80,7 +83,6 @@ export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
   };
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -90,11 +92,7 @@ export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
   }, [messages, isLoading]);
 
   const handleSuggestedQuestion = (question: string) => {
-    setInput(question);
-    setTimeout(() => {
-      sendMessage({ role: "user", content: question });
-      setInput("");
-    }, 50);
+    sendMessage({ role: "user", content: question });
   };
 
   const handleReset = () => {
@@ -104,7 +102,6 @@ export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
   const handleSubmit = (val: string) => {
     if (!val.trim()) return;
     sendMessage({ role: "user", content: val });
-    setInput("");
   }
 
   return (
@@ -115,37 +112,60 @@ export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95, transition: { duration: 0.2 } }}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-[100] w-[calc(100vw-32px)] sm:w-[400px] h-[600px] max-h-[calc(100vh-120px)] bg-white rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex flex-col overflow-hidden border border-gray-200"
+          className={cn(
+            "fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-[100] w-[calc(100vw-32px)] sm:w-[420px] h-[650px] max-h-[calc(100vh-120px)] rounded-[32px] flex flex-col overflow-hidden backdrop-blur-3xl shadow-2xl transition-colors duration-300 ring-1 ring-inset",
+            isDark 
+              ? "bg-[#0B1221]/80 ring-white/10 shadow-black/50" 
+              : "bg-white/90 ring-gray-900/5 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.15)]"
+          )}
         >
-          <ChatHeader onClose={onClose} onReset={handleReset} />
+          {/* Subtle ambient gradients */}
+          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-[32px]">
+            <div className={cn(
+              "absolute -top-32 -right-32 w-64 h-64 rounded-full blur-[80px] opacity-50",
+              isDark ? "bg-[#38bdf8]/20" : "bg-red-400/10"
+            )} />
+            <div className={cn(
+              "absolute -bottom-32 -left-32 w-64 h-64 rounded-full blur-[80px] opacity-50",
+              isDark ? "bg-[#818cf8]/20" : "bg-blue-400/10"
+            )} />
+          </div>
+
+          <ChatHeader onClose={onClose} onReset={handleReset} isDark={isDark} toggleTheme={toggleTheme} />
           
-          <div className="flex-1 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] py-4 px-3 sm:px-4 flex flex-col">
+          <div className="flex-1 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] py-4 px-3 sm:px-4 flex flex-col relative z-10">
             {messages.length === 0 ? (
               <div className="flex flex-col flex-1">
                 <div className="flex-1">
-                  <EmptyState />
+                  <EmptyState isDark={isDark} />
                 </div>
                 <div className="shrink-0 mb-2">
-                  <SuggestedQuestions onSelect={handleSuggestedQuestion} />
+                  <SuggestedQuestions onSelect={handleSuggestedQuestion} isDark={isDark} />
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col">
+              <div className="flex flex-col pt-2">
                 {messages.map((message) => (
                   <MessageBubble
                     key={message.id}
                     role={message.role as "user" | "assistant"}
                     content={message.content}
+                    isDark={isDark}
                   />
                 ))}
                 {isLoading && (
                    <motion.div
-                   initial={{ opacity: 0 }}
-                   animate={{ opacity: 1 }}
-                   className="flex w-full mb-4 px-4 justify-start"
+                   initial={{ opacity: 0, y: 10 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   className={cn(
+                     "flex w-full mb-4 px-4 justify-start"
+                   )}
                  >
                    <div className="flex max-w-[85%] gap-3 flex-row">
-                     <div className="shrink-0 w-8 h-8 rounded-full bg-[#0D1B2A] flex items-center justify-center p-1.5 shadow-sm mt-1">
+                     <div className={cn(
+                        "shrink-0 w-8 h-8 rounded-full flex items-center justify-center p-1.5 shadow-sm mt-1",
+                        isDark ? "bg-[#1E293B] border border-white/10" : "bg-gradient-to-tr from-[#0D1B2A] to-[#1a2c42]"
+                      )}>
                         <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                         <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce mx-0.5" style={{ animationDelay: '150ms' }} />
                         <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
@@ -158,11 +178,14 @@ export function ChatWindow({ isOpen, onClose }: ChatWindowProps) {
             )}
           </div>
 
-          <div className="shrink-0 bg-white border-t border-gray-100/60 z-10">
-             <ChatInput 
-              onSubmit={handleSubmit} 
-              isLoading={isLoading} 
-            />
+          <div className={cn(
+            "shrink-0 relative z-20 px-2 pb-2",
+          )}>
+             <ChatInput
+               onSubmit={handleSubmit}
+               isLoading={isLoading}
+               isDark={isDark}
+             />
           </div>
         </motion.div>
       )}

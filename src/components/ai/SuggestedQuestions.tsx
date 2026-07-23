@@ -2,9 +2,11 @@
 
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/src/lib/utils";
 
 interface SuggestedQuestionsProps {
   onSelect: (question: string) => void;
+  isDark: boolean;
 }
 
 const QUESTIONS = [
@@ -14,7 +16,7 @@ const QUESTIONS = [
   "How do admissions work?",
 ];
 
-export function SuggestedQuestions({ onSelect }: SuggestedQuestionsProps) {
+export function SuggestedQuestions({ onSelect, isDark }: SuggestedQuestionsProps) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-2 mt-4 px-2">
         {QUESTIONS.map((q, i) => (
@@ -24,7 +26,12 @@ export function SuggestedQuestions({ onSelect }: SuggestedQuestionsProps) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: i * 0.1 }}
             onClick={() => onSelect(q)}
-            className="px-4 py-2 text-[13px] font-medium text-[#0D1B2A] bg-gray-50 hover:bg-gray-100 border border-gray-200/60 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B2A] whitespace-nowrap"
+            className={cn(
+              "px-4 py-2 text-[13px] font-medium rounded-full transition-all focus:outline-none focus-visible:ring-2 whitespace-nowrap",
+              isDark 
+                ? "bg-[#1E293B] hover:bg-[#334155] border border-white/10 text-gray-200 focus-visible:ring-white/20" 
+                : "bg-gray-50 hover:bg-gray-100 border border-gray-200/60 text-[#0D1B2A] focus-visible:ring-[#0D1B2A]"
+            )}
           >
             {q}
           </motion.button>

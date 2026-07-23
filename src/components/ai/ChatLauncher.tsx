@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, AnimatePresence } from "motion/react";
 import { MessageSquare, X, Sparkles } from "lucide-react";
 import { cn } from "@/src/lib/utils";
@@ -7,19 +6,20 @@ import { cn } from "@/src/lib/utils";
 interface ChatLauncherProps {
   isOpen: boolean;
   toggleChat: () => void;
+  isDark: boolean;
 }
 
-export function ChatLauncher({ isOpen, toggleChat }: ChatLauncherProps) {
+export function ChatLauncher({ isOpen, toggleChat, isDark }: ChatLauncherProps) {
   return (
     <motion.button
       onClick={toggleChat}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={cn(
-        "fixed bottom-6 right-6 z-[100] flex items-center justify-center w-14 h-14 rounded-full shadow-[0_8px_30px_rgba(13,27,42,0.3)] transition-colors duration-300",
+        "fixed bottom-6 right-6 z-[100] flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300 border backdrop-blur-xl",
         isOpen 
-          ? "bg-white text-gray-900 border border-gray-100" 
-          : "bg-gradient-to-tr from-[#0D1B2A] to-[#1a2c42] text-white"
+          ? (isDark ? "bg-[#1E293B] text-white border-white/10" : "bg-white text-gray-900 border-gray-200")
+          : (isDark ? "bg-gradient-to-tr from-[#0F172A] to-[#1E293B] text-white border-white/5 shadow-black/50" : "bg-gradient-to-tr from-[#0D1B2A] to-[#1a2c42] text-white border-transparent shadow-[#0D1B2A]/30")
       )}
       aria-label={isOpen ? "Close AI Assistant" : "Open AI Assistant"}
     >
