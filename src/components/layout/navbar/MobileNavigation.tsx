@@ -96,15 +96,15 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
             className="absolute inset-y-0 right-0 w-full sm:w-[400px] bg-white shadow-2xl flex flex-col"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 pb-2">
-              <div className="flex items-center gap-3">
-                <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-sm flex items-center justify-center bg-[#0D1B2A]">
+            <div className="flex items-center justify-between p-6 border-b border-gray-100 shadow-sm relative z-10">
+              <div className="flex items-center">
+                <div className="relative w-36 h-8 flex items-center">
                   <Image 
-                    src="/assets/logos/amc-logo/AMC - Icon  Monogram Only.png" 
-                    alt="AMC Icon" 
-                    width={24}
-                    height={24}
-                    className="object-contain brightness-0 invert"
+                    src="/assets/logos/amc-logo/AMC - Horizontal Logo.png" 
+                    alt="Athul's Maths Classroom" 
+                    fill
+                    sizes="144px"
+                    className="object-contain object-left"
                   />
                 </div>
               </div>
