@@ -80,9 +80,10 @@ export function ContactForm() {
             </label>
             <select
               id="class"
+              defaultValue=""
               className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#E31E24]/20 focus:border-[#E31E24] transition-all appearance-none"
             >
-              <option value="" disabled selected>Select Class</option>
+              <option value="" disabled>Select Class</option>
               <option value="8">Class 8</option>
               <option value="9">Class 9</option>
               <option value="10">Class 10</option>
@@ -96,9 +97,10 @@ export function ContactForm() {
             </label>
             <select
               id="time"
+              defaultValue=""
               className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#E31E24]/20 focus:border-[#E31E24] transition-all appearance-none"
             >
-              <option value="" disabled selected>Select Time</option>
+              <option value="" disabled>Select Time</option>
               <option value="morning">Morning (9 AM - 12 PM)</option>
               <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
               <option value="evening">Evening (4 PM - 7 PM)</option>

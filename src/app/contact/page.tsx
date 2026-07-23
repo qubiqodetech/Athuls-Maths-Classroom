@@ -1,7 +1,9 @@
 import { Metadata } from "next"
 import { ContactHero } from "@/src/components/sections/admissions/hero"
 import { ContactHub } from "@/src/components/sections/contact/hub"
-import { VisitSection } from "@/src/components/sections/contact/visit"
+import { ContactLocation } from "@/src/components/sections/contact/location"
+import { ContactFaq } from "@/src/components/sections/contact/faq"
+import { ContactSocial } from "@/src/components/sections/contact/social"
 import { FinalAdmissionsCTA } from "@/src/components/sections/admissions/cta"
 
 export const metadata: Metadata = {
@@ -13,8 +15,10 @@ export default function ContactPage() {
   return (
     <main className="flex min-h-screen flex-col w-full overflow-hidden">
       <ContactHero />
+      <ContactLocation />
       <ContactHub />
-      <VisitSection />
+      <ContactFaq />
+      <ContactSocial />
       <FinalAdmissionsCTA />
     </main>
   )
