@@ -5,9 +5,9 @@ import { CONTACT_INFO } from "./constants";
 
 export function FooterContact() {
   return (
-    <div>
+    <div className="h-full flex flex-col">
       <h3 className="text-white font-semibold text-lg mb-6 tracking-tight">Get in Touch</h3>
-      <ul className="flex flex-col gap-5">
+      <ul className="flex flex-col gap-5 flex-1">
         {CONTACT_INFO.map((info) => {
           const Icon = info.icon;
           

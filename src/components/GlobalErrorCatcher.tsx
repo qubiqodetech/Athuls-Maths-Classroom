@@ -1,37 +1,27 @@
-import React from 'react';
+"use client";
+import React, { useEffect } from 'react';
+
 export function GlobalErrorCatcher() {
-  return (
-    <script dangerouslySetInnerHTML={{ __html: `
-      window.onerror = function(msg, url, line, col, error) {
-        var div = document.createElement('div');
-        div.style.position = 'fixed';
-        div.style.top = '0';
-        div.style.left = '0';
-        div.style.zIndex = '999999';
-        div.style.background = 'red';
-        div.style.color = 'white';
-        div.style.padding = '20px';
-        div.style.width = '100vw';
-        div.style.height = '100vh';
-        div.style.overflow = 'auto';
-        div.innerText = 'ERROR: ' + msg + '\\n' + url + ':' + line + ':' + col + '\\n' + (error && error.stack ? error.stack : '');
-        document.body.appendChild(div);
-      };
-      window.addEventListener('unhandledrejection', function(e) {
-        var div = document.createElement('div');
-        div.style.position = 'fixed';
-        div.style.top = '0';
-        div.style.left = '0';
-        div.style.zIndex = '999999';
-        div.style.background = 'red';
-        div.style.color = 'white';
-        div.style.padding = '20px';
-        div.style.width = '100vw';
-        div.style.height = '100vh';
-        div.style.overflow = 'auto';
-        div.innerText = 'UNHANDLED REJECTION: ' + (e.reason && e.reason.stack ? e.reason.stack : e.reason);
-        document.body.appendChild(div);
-      });
-    `}} />
-  );
+  useEffect(() => {
+    const handleError = (msg: any, url: any, line: any, col: any, error: any) => {
+      // Avoid creating full screen error overlays in production
+      if (process.env.NODE_ENV === 'production') return;
+      console.error('Global Error:', msg, url, line, col, error);
+    };
+
+    const handleRejection = (e: PromiseRejectionEvent) => {
+      if (process.env.NODE_ENV === 'production') return;
+      console.error('Unhandled Rejection:', e.reason);
+    };
+
+    window.onerror = handleError;
+    window.addEventListener('unhandledrejection', handleRejection);
+
+    return () => {
+      window.onerror = null;
+      window.removeEventListener('unhandledrejection', handleRejection);
+    };
+  }, []);
+
+  return null;
 }

@@ -5,9 +5,9 @@ import { PROGRAMS } from "./constants";
 
 export function FooterPrograms() {
   return (
-    <div>
+    <div className="h-full flex flex-col">
       <h3 className="text-white font-semibold text-lg mb-6 tracking-tight">Academic Programs</h3>
-      <ul className="flex flex-col gap-3.5">
+      <ul className="flex flex-col gap-3.5 flex-1">
         {PROGRAMS.map((program) => (
           <li key={program.label}>
             <Link 

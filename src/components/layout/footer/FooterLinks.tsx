@@ -9,9 +9,9 @@ export function FooterLinks() {
   const col2 = QUICK_LINKS.slice(mid);
 
   return (
-    <div>
+    <div className="h-full flex flex-col">
       <h3 className="text-white font-semibold text-lg mb-6 tracking-tight">Navigation</h3>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 flex-1">
         <ul className="flex flex-col gap-3.5">
           {col1.map((link) => (
             <li key={link.label}>

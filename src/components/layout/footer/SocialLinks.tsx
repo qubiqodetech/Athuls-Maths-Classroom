@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function SocialLinks() {
   return (
-    <div className="flex flex-wrap items-center gap-3 mt-4">
+    <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
       {SOCIAL_LINKS.map((social) => {
         const Icon = social.icon;
         return (
