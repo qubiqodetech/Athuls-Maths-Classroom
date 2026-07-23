@@ -15,29 +15,29 @@ export function AnimatedLayout({ children }: AnimatedLayoutProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 1, filter: "blur(0px)", y: 0, scale: 1 }}
+      initial={{ opacity: 0, y: 40, filter: "blur(12px)", scale: 0.97 }}
       animate={{ 
         opacity: 1, 
         filter: "blur(0px)", 
         y: 0, 
         scale: 1,
         transition: {
-          duration: 0.5,
-          delay: 0.1,
-          ease: "easeOut"
+          duration: 1,
+          delay: 0.3, // wait for overlay to cover/uncover
+          ease: [0.16, 1, 0.3, 1]
         }
       }}
       exit={{ 
         opacity: 0, 
-        filter: "blur(8px)", 
-        scale: 0.99, 
-        y: 0,
+        filter: "blur(12px)", 
+        scale: 0.97,
+        y: -40,
         transition: {
-          duration: 0.3,
-          ease: "easeInOut"
+          duration: 0.6,
+          ease: [0.76, 0, 0.24, 1]
         }
       }}
-      className="flex-1 flex flex-col w-full"
+      className="flex-1 flex flex-col w-full origin-top"
     >
       {children}
     </motion.div>
